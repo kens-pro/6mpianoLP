@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>トリイ ピアノ・エレクトーン アーリーサマーセール２０２５ - Grandeur Edition</title> <!-- タイトル変更 -->
+  <title>トリイ ピアノ・エレクトーン アーリーサマーセール２０２５ - Grandeur Edition</title>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -15,1849 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    /* リセットとベーススタイル */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Noto Sans JP', sans-serif;
-      line-height: 1.7; /* 少し広げる */
-      color: #2d3748; /* 少し濃いグレーに */
-      background: #f7fafc; /* ベース背景を明るいグレーに */
-      min-height: 100vh;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px; /* 角丸を少し大きく */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 画像にも影 */
-    }
-
-    a {
-      text-decoration: none;
-      color: #7c3aed; /* ベースリンク色を少し濃く */
-      transition: all 0.3s ease; /* トランジション対象を all に */
-    }
-
-    a:hover {
-      color: #5a2a99; /* ホバー色も調整 */
-      text-decoration: none; /* ホバー時の下線を削除 */
-      opacity: 0.8;
-    }
-
-    /* 電話リンクのスタイル */
-    a.tel-link {
-      color: inherit;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      display: inline-block; /* ホバー効果のため */
-      position: relative;
-    }
-    a.tel-link::after { /* ホバー時のアンダーライン風エフェクト */
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        display: block;
-        margin-top: 2px;
-        right: 0;
-        background: linear-gradient(to right, #DAA520, #B8860B); /* ゴールド系 */
-        transition: width .3s ease;
-        -webkit-transition: width .3s ease;
-    }
-    a.tel-link:hover::after {
-        width: 100%;
-        left: 0;
-        background: linear-gradient(to right, #DAA520, #B8860B); /* ゴールド系 */
-    }
-    a.tel-link:hover {
-       opacity: 1; /* 他のリンクと挙動を合わせる */
-       color: #c53030; /* 赤系に */
-    }
-
-    /* コンテナとレイアウト */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px; /* 少し広げる */
-      position: relative;
-      z-index: 1;
-    }
-
-    .section {
-      margin-bottom: 100px; /* セクション間隔を広げる */
-      position: relative;
-    }
-
-    /* ヘッダー */
-    header {
-      background: linear-gradient(135deg, #4a0e34, #1a1a3d); /* 深い紫と紺のグラデーション */
-      color: white;
-      padding: 25px 0; /* 少し広げる */
-      position: relative;
-      z-index: 10;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 15px; /* 少し広げる */
-    }
-
-    .logo-icon {
-        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)); /* アイコンに輝き */
-        animation: subtleRotate 10s linear infinite; /* ゆっくり回転 */
-    }
-    @keyframes subtleRotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-
-    .logo-text {
-      font-size: 32px; /* 少し大きく */
-      font-weight: bold;
-      font-family: 'Playfair Display', serif; /* フォント変更 */
-      letter-spacing: 1px; /* 文字間隔 */
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* テキストシャドウ */
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 20px; /* 少し広げる */
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 12px; /* 少し広げる */
-    }
-
-    .social-icon {
-      width: 44px; /* 少し大きく */
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(255, 255, 255, 0.1); /* 背景少し薄く */
-      border: 1px solid rgba(255, 255, 255, 0.2); /* 枠線追加 */
-      border-radius: 50%;
-      transition: all 0.3s ease;
-    }
-
-    .social-icon svg { /* アイコンの色を白に */
-        stroke: white;
-        fill: white;
-    }
-
-    .social-icon:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-3px) scale(1.1); /* ホバー効果強化 */
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* ホバー時の影 */
-      border-color: white;
-    }
-
-    .contact-button {
-      background: linear-gradient(to right, #DAA520, #B8860B); /* ゴールド系グラデーション */
-      color: #ffffff; /* 文字色を白に */
-      border: none;
-      padding: 14px 28px; /* 少し大きく */
-      border-radius: 50px;
-      font-weight: bold;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 10px; /* 少し広げる */
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* 影を強く */
-      transition: all 0.3s ease;
-      text-transform: uppercase; /* 大文字に */
-      letter-spacing: 0.5px;
-    }
-    .contact-button svg {
-        stroke: white; /* アイコンの色 */
-    }
-
-    .contact-button:hover {
-      box-shadow: 0 8px 20px rgba(218, 165, 32, 0.5); /* ゴールド系の影 */
-      transform: translateY(-3px) scale(1.05); /* ホバー効果強化 */
-      background: linear-gradient(to right, #B8860B, #DAA520); /* グラデーション反転 */
-    }
-
-    /* ヒーローセクション */
-    .hero {
-      text-align: center;
-      margin-bottom: 100px; /* 間隔調整 */
-      position: relative;
-    }
-
-    .hero-image-container {
-      position: relative;
-      border-radius: 0; /* 角丸なし */
-      overflow: hidden;
-      margin-bottom: -60px; /* カードと重ねる */
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); /* 影を強く */
-      height: 650px; /* 少し高く */
-    }
-
-.hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      /* ▼▼▼ background と opacity を修正 ▼▼▼ */
-      background: linear-gradient(135deg, rgba(74, 14, 52, 0.3), rgba(26, 26, 61, 0.3), rgba(0, 0, 0, 0.2)); /* <<< アルファ値を小さく（例: 0.5, 0.4） */
-      z-index: 1;
-      /* ▲▲▲ ここまで修正 ▲▲▲ */
-    }
-
-    .hero-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 0;
-      filter: contrast(110%) brightness(90%); /* 画像コントラスト調整 */
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 55%; /* 少し下げる */
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      color: white;
-      width: 100%;
-      padding: 0 20px;
-      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6); /* 影を強く */
-    }
-
-  .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 72px; /* さらに大きく */
-      font-weight: 700; /* Bold */
-      margin-bottom: 25px; /* 間隔調整 */
-      letter-spacing: 3px; /* 文字間隔 */
-      line-height: 1.2;
-      /* ▼▼▼ ここから変更 ▼▼▼ */
-      /* background: linear-gradient(to right, #fdeab5, #fff, #fdeab5); */ /* コメントアウト */
-      /* -webkit-background-clip: text; */ /* コメントアウト */
-      /* -webkit-text-fill-color: transparent; */ /* コメントアウト */
-      color: #FFD700; /* <<< 文字色を明るいゴールドに */
-      /* filter: drop-shadow(0 0 10px rgba(255, 223, 181, 0.5)); */ /* コメントアウト */
-      text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75), /* 濃い影 */
-                   0px 0px 20px rgba(255, 215, 0, 0.7); /* ゴールドの光彩 */
-                   /* ↑ 値は好みで調整してください */
-      /* ▲▲▲ ここまで変更 ▲▲▲ */
-    }
-
-    .hero-subtitle {
-      font-size: 32px; /* 少し大きく */
-      font-weight: 300;
-      margin-bottom: 40px; /* 間隔調整 */
-      font-style: italic; /* イタリックに */
-      opacity: 0.9;
-    }
-
-    .hero-date {
-      font-size: 26px; /* 少し大きく */
-      font-weight: 500;
-      background: rgba(255, 255, 255, 0.15); /* 背景少し透明度調整 */
-      padding: 15px 40px; /* 少し大きく */
-      border-radius: 50px;
-      display: inline-block;
-      backdrop-filter: blur(8px); /* ブラー強く */
-      border: 1px solid rgba(255, 255, 255, 0.3); /* 枠線追加 */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 影追加 */
-    }
-
-    .card {
-      background: #ffffff; /* 背景白 */
-      border-radius: 20px; /* 角丸大きく */
-      padding: 50px; /* パディング大きく */
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12); /* 影を調整 */
-      position: relative;
-      overflow: hidden;
-      z-index: 3; /* ヒーロー画像の上に */
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 8px; /* 太く */
-      background: linear-gradient(to right, #DAA520, #B8860B, #DAA520); /* ゴールド系 */
-    }
-
- .card-title {
-      font-size: 32px;
-      font-weight: bold;
-      color: #4a0e34;
-      margin-bottom: 15px; /* 下線のpadding分、少し詰める (調整してください) */
-      position: relative;
-      display: block;      /* <<< inline-block から block に変更 */
-      text-align: center;  /* <<< この行を追加 */
-      padding-bottom: 20px; /* <<< この行を追加 (下線用のスペース) */
-      font-family: 'Playfair Display', serif;
-    }
-
-  .card-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;            /* <<< -12px から 0 に変更 */
-      left: 50%;           /* <<< 0 から 50% に変更 */
-      transform: translateX(-50%); /* <<< この行を追加 */
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(to right, #DAA520, #B8860B);
-      border-radius: 2px;
-    }
-
-    .card-text {
-      color: #4a5568; /* 文字色調整 */
-      margin-bottom: 40px; /* 間隔調整 */
-      font-size: 17px; /* 少し大きく */
-      line-height: 1.8; text-align: left; /* <<< この行を追加または確認 */
-    }
-
-    /* 特徴カード */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px; /* 間隔広げる */
-      margin-bottom: 50px; /* 間隔調整 */
-    }
-
-    .feature-card {
-      background: white;
-      border-radius: 16px;
-      padding: 35px; /* 少し大きく */
-      text-align: center;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* トランジション調整 */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); /* 影調整 */
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #e2e8f0; /* 枠線追加 */
-    }
-
-    .feature-card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(218, 165, 32, 0.1) 0%, rgba(255, 255, 255, 0) 70%); /* ゴールド系の光彩 */
-      transition: opacity 0.5s ease;
-      opacity: 0;
-      z-index: 0;
-    }
-
-    .feature-card:hover::before {
-        opacity: 1;
-    }
-
-    .feature-card:hover {
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); /* ホバー時の影 */
-      transform: translateY(-10px) scale(1.03); /* ホバー効果強化 */
-      border-color: #DAA520; /* 枠線色変更 */
-    }
-    /* アイコンとテキストは疑似要素の上に */
-    .feature-icon, .feature-title, .feature-description {
-        position: relative;
-        z-index: 1;
-    }
-
-    .feature-icon {
-      width: 70px; /* 大きく */
-      height: 70px;
-      margin: 0 auto 25px; /* 間隔調整 */
-      color: #4a0e34; /* 深い紫 */
-      padding: 18px; /* パディング調整 */
-      background: linear-gradient(135deg, #fdeab5, #fff0db); /* ゴールド風背景 */
-      border-radius: 50%;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(218, 165, 32, 0.3); /* ゴールド系の影 */
-    }
-    .feature-card:hover .feature-icon {
-        transform: rotateY(360deg); /* ホバーでアイコン回転 */
-        background: linear-gradient(135deg, #DAA520, #B8860B); /* ゴールド系に */
-        color: white;
-        box-shadow: 0 8px 20px rgba(218, 165, 32, 0.5);
-    }
-    .feature-icon svg { /* アイコンサイズ調整 */
-        width: 100%;
-        height: 100%;
-    }
-
-    .feature-title {
-      font-weight: bold;
-      color: #8b5cf6; /* 紫系に戻す */
-      margin-bottom: 15px; /* 間隔調整 */
-      font-size: 20px; /* 少し大きく */
-      font-family: 'Playfair Display', serif;
-    }
-    .feature-card:hover .feature-title {
-        color: #4a0e34; /* ホバーで色変更 */
-    }
-
-    .feature-description {
-      font-size: 16px; /* 少し大きく */
-      color: #718096; /* 色調整 */
-    }
-
-    /* ボタン */
-    .button-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px; /* 間隔調整 */
-      justify-content: center;
-    }
-
-    .button {
-      padding: 18px 36px; /* 大きく */
-      border-radius: 50px;
-      font-weight: bold;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px; /* 間隔調整 */
-      transition: all 0.3s ease;
-      border: none;
-      text-decoration: none;
-      letter-spacing: 0.5px;
-      text-transform: uppercase; /* 大文字に */
-    }
-
-    .button-primary {
-      background: linear-gradient(to right, #6d28d9, #4f46e5); /* 紫系のグラデーション */
-      color: white;
-      box-shadow: 0 8px 25px rgba(109, 40, 217, 0.4); /* 影調整 */
-    }
-
-    .button-primary:hover {
-      box-shadow: 0 12px 30px rgba(109, 40, 217, 0.6); /* ホバー影 */
-      transform: translateY(-4px) scale(1.05); /* ホバー効果 */
-      background: linear-gradient(to right, #4f46e5, #6d28d9); /* グラデーション反転 */
-      color: white;
-      text-decoration: none;
-    }
-
-    .button-outline {
-      background: transparent; /* 背景透明に */
-      color: #7c3aed; /* 紫 */
-      border: 2px solid #7c3aed; /* 枠線を太く */
-      box-shadow: none; /* 影削除 */
-      padding: 16px 34px; /* パディング調整 (border分引く) */
-    }
-
-    .button-outline:hover {
-      background: #7c3aed; /* 背景を紫に */
-      color: white;
-      box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3); /* ホバー影 */
-      transform: translateY(-4px);
-      text-decoration: none;
-    }
-    .button-outline svg { /* アウトラインボタンのアイコン色 */
-       stroke: #7c3aed;
-       transition: stroke 0.3s ease;
-    }
-    .button-outline:hover svg {
-       stroke: white;
-    }
-
-
-    /* イベント詳細 */
-    .event-details {
-      background: linear-gradient(135deg, #1a1a3d, #3a0d2b); /* 深い紺と紫 */
-      border-radius: 20px;
-      padding: 80px 50px; /* パディング調整 */
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .event-details::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23DAA520' fill-opacity='0.05'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31l5 20H48l5-20zm-30 25l5 20H18l5-20zm42 0l5 20H60l5-20zM31 0l5 20H26l5-20zm42 31l5 20H68l5-20zm-30 25l5 20H38l5-20zm42 0l5 20H80l5-20z'/%3E%3C/g%3E%3C/svg%3E"); /* ゴールド系のSVGパターン */
-      opacity: 0.5;
-      z-index: 0;
-    }
-
-    .event-title {
-      font-size: 40px; /* 大きく */
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 60px; /* 間隔調整 */
-      color: #fdeab5; /* ゴールド風テキスト */
-      position: relative;
-      z-index: 1;
-      font-family: 'Playfair Display', serif;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    .event-title::after {
-      content: '';
-      position: absolute;
-      bottom: -20px; /* 位置調整 */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px; /* 長く */
-      height: 4px; /* 太く */
-      background: linear-gradient(to right, #DAA520, #B8860B); /* ゴールド系 */
-      border-radius: 2px;
-      box-shadow: 0 0 10px rgba(218, 165, 32, 0.7); /* 輝き */
-    }
-
-    .event-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px; /* 間隔調整 */
-      margin-bottom: 50px; /* 間隔調整 */
-      position: relative;
-      z-index: 1;
-    }
-
-    .event-card {
-      background: rgba(255, 255, 255, 0.05); /* 半透明背景 */
-      border-radius: 16px;
-      padding: 35px; /* パディング調整 */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.1); /* 内枠線追加 */
-      display: flex;
-      align-items: flex-start;
-      gap: 25px; /* 間隔調整 */
-      transition: all 0.3s ease;
-      color: #e2e8f0; /* テキスト色調整 */
-    }
-
-    .event-card:hover {
-      transform: translateY(-8px) scale(1.02); /* ホバー効果 */
-      background: rgba(255, 255, 255, 0.1); /* ホバー背景 */
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-    }
-
-    .icon-circle {
-      width: 65px; /* 大きく */
-      height: 65px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: all 0.3s ease;
-    }
-
-    .icon-circle.purple {
-      background: linear-gradient(135deg, #a855f7, #7c3aed); /* 紫グラデーション */
-      box-shadow: 0 8px 16px rgba(124, 58, 237, 0.3);
-    }
-
-    .icon-circle.pink {
-      background: linear-gradient(135deg, #ec4899, #d946ef); /* ピンク系グラデーション */
-      box-shadow: 0 8px 16px rgba(217, 70, 239, 0.3);
-    }
-    .event-card:hover .icon-circle {
-        transform: scale(1.1) rotate(15deg); /* ホバーでアイコン傾ける */
-    }
-    .icon-circle svg {
-        stroke: white; /* アイコン色 */
-        width: 28px; height: 28px; /* サイズ調整 */
-    }
-
-    .event-card-title {
-      font-weight: bold;
-      font-size: 22px; /* 少し大きく */
-      margin-bottom: 15px;
-    }
-
-    .event-card-title.purple {
-      color: #d8b4fe; /* 明るい紫 */
-    }
-
-    .event-card-title.pink {
-      color: #f9a8d4; /* 明るいピンク */
-    }
-    .event-card p {
-        color: #cbd5e0; /* テキスト色調整 */
-        font-size: 16px;
-    }
-
-    .access-card {
-      background: rgba(255, 255, 255, 0.05); /* 半透明背景 */
-      border-radius: 16px;
-      padding: 35px; /* パディング調整 */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-      margin-top: 40px; /* 間隔調整 */
-      position: relative;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-
-    .access-card:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-    }
-
-    .access-title {
-      font-weight: bold;
-      font-size: 24px; /* 少し大きく */
-      margin-bottom: 25px; /* 間隔調整 */
-      color: #f9a8d4; /* 明るいピンク */
-      position: relative;
-      display: inline-block;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .access-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px; /* 位置調整 */
-      left: 0;
-      width: 50px; /* 長さ調整 */
-      height: 3px; /* 太さ調整 */
-      background: linear-gradient(to right, #ec4899, #d946ef); /* ピンク系 */
-      border-radius: 1.5px;
-    }
-
-    .access-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px; /* 間隔調整 */
-    }
-
-    .access-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 18px; /* 間隔調整 */
-      color: #cbd5e0; /* テキスト色調整 */
-      font-size: 16px;
-    }
-
-    .access-icon {
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9); /* 青系グラデーション */
-      width: 44px; /* 大きさ調整 */
-      height: 44px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      box-shadow: 0 6px 12px rgba(14, 165, 233, 0.3); /* 影調整 */
-      transition: all 0.3s ease;
-    }
-    .access-item:hover .access-icon {
-        transform: scale(1.15); /* ホバーでアイコン拡大 */
-    }
-    .access-icon svg {
-        stroke: white;
-        width: 20px; height: 20px;
-    }
-
-    /* 商品ラインナップ */
-    .lineup-header {
-      text-align: center;
-      margin-bottom: 50px; /* 間隔調整 */
-    }
-
-    .badge {
-      display: inline-block;
-      background: linear-gradient(to right, #DAA520, #B8860B); /* ゴールド系 */
-      color: white;
-      padding: 10px 25px; /* パディング調整 */
-      border-radius: 50px;
-      font-weight: bold;
-      margin-bottom: 20px; /* 間隔調整 */
-      font-size: 18px; /* 少し大きく */
-      box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4); /* ゴールド系の影 */
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .lineup-title {
-      font-size: 40px; /* 大きく */
-      font-weight: bold;
-      color: #1a202c; /* 濃いグレー */
-      margin-bottom: 25px; /* 間隔調整 */
-      font-family: 'Playfair Display', serif;
-    }
-
-    .divider {
-      width: 100px; /* 長く */
-      height: 5px; /* 太く */
-      background: linear-gradient(to right, #DAA520, #B8860B, #DAA520); /* ゴールド系 */
-      margin: 0 auto;
-      border-radius: 2.5px;
-      box-shadow: 0 0 10px rgba(218, 165, 32, 0.5); /* 輝き */
-    }
-
-    /* タブ */
-    .tabs {
-      display: flex;
-      margin-bottom: 40px; /* 間隔調整 */
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 影調整 */
-      background: white; /* 背景色 */
-    }
-
-    .tab {
-      flex: 1;
-      text-align: center;
-      padding: 25px; /* パディング調整 */
-      background: transparent; /* 背景透明に */
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      position: relative;
-      color: #4a5568; /* 通常時の色 */
-      font-size: 17px; /* 少し大きく */
-      border-bottom: 3px solid transparent; /* 下線用スペース */
-    }
-
-    .tab.active {
-      color: #4a0e34; /* アクティブ時の色 (深い紫) */
-      background: linear-gradient(to bottom, rgba(218, 165, 32, 0.05), rgba(218, 165, 32, 0)); /* 微かなゴールド背景 */
-      border-bottom: 3px solid #DAA520; /* ゴールドの下線 */
-    }
-    /* アクティブタブの三角は削除 */
-    .tab.active::after { display: none; }
-
-
-    .tab-content {
-      display: none;
-      background: #ffffff; /* 背景白 */
-      border-radius: 16px;
-      padding: 50px; /* パディング調整 */
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); /* 影調整 */
-      border: 1px solid #e2e8f0; /* 枠線 */
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    .piano-type {
-      font-size: 26px; /* 大きく */
-      font-weight: bold;
-      color: #c53030; /* 赤系 */
-      margin-bottom: 25px; /* 間隔調整 */
-      margin-top: 40px; /* 間隔調整 */
-      position: relative;
-      display: inline-block;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .piano-type::after {
-      content: '';
-      position: absolute;
-      bottom: -10px; /* 位置調整 */
-      left: 0;
-      width: 40px; /* 長さ調整 */
-      height: 3px; /* 太さ調整 */
-      background: linear-gradient(to right, #f56565, #c53030); /* 赤系グラデーション */
-      border-radius: 1.5px;
-    }
-
-    .piano-type:first-child {
-      margin-top: 0;
-    }
-
-    /* テーブル */
-    .table-container {
-      overflow-x: auto;
-      margin-bottom: 40px; /* 間隔調整 */
-      border-radius: 12px; /* コンテナに角丸 */
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* コンテナに影 */
-      border: 1px solid #e2e8f0; /* 枠線 */
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      /* テーブル自体の角丸と影は削除 */
-      /* border-radius: 12px; */
-      /* overflow: hidden; */
-      /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05); */
-    }
-
-    th {
-      background: linear-gradient(to bottom, #f7fafc, #edf2f7); /* 明るいグレーグラデーション */
-      color: #2d3748; /* 濃いグレー */
-      text-align: left;
-      padding: 18px; /* パディング調整 */
-      font-weight: bold;
-      font-size: 15px; /* 少し小さく */
-      text-transform: uppercase; /* 大文字に */
-      letter-spacing: 0.5px;
-      border-bottom: 2px solid #cbd5e0; /* 下線強化 */
-    }
-
-    td {
-      padding: 18px; /* パディング調整 */
-      border-top: 1px solid #edf2f7; /* 線を薄く */
-      font-size: 16px; /* 少し大きく */
-      vertical-align: middle; /* 中央揃え */
-    }
-
-    tr:hover {
-      background-color: #fefcbf; /* 黄色みがかったホバー色 */
-    }
-    /* リンクのスタイル */
-    td a {
-        color: #7c3aed;
-        font-weight: 500;
-        position: relative;
-        display: inline-block;
-    }
-    td a::after { /* ホバー下線エフェクト */
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 1px;
-        display: block;
-        margin-top: 1px;
-        right: 0;
-        background: #7c3aed;
-        transition: width .2s ease;
-    }
-    td a:hover::after {
-        width: 100%;
-        left: 0;
-    }
-    td a:hover {
-        opacity: 1; /* 他のリンクと揃える */
-        color: #5a2a99;
-    }
-
-    .sold {
-      color: #c53030; /* 赤系 */
-      font-weight: bold; /* 太字に */
-      font-style: italic;
-    }
-
-    .sold-location {
-      color: #718096; /* グレー */
-      font-size: 14px;
-      display: block; /* 改行させる */
-      margin-top: 4px;
-    }
-    /* 商談中なども同様に */
-    td span.sold:not(:last-child)::after {
-        content: " / "; /* 区切り文字 */
-        color: #a0aec0;
-        font-weight: normal;
-        font-style: normal;
-        margin: 0 4px;
-    }
-
-
-    .highlight {
-      background: linear-gradient(to right, #fefcbf, #faf089); /* 黄色系グラデーション */
-      padding: 12px 20px; /* パディング調整 */
-      display: inline-block;
-      margin-bottom: 25px; /* 間隔調整 */
-      border-radius: 8px;
-      font-weight: bold; /* 太字に */
-      color: #b7791f; /* 茶色系 */
-      box-shadow: 0 5px 15px rgba(250, 240, 137, 0.5); /* 黄色系の影 */
-      border: 1px solid #f6e05e; /* 黄色枠線 */
-    }
-
-    /* 展示場情報 */
-    .showroom {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15); /* 影調整 */
-      margin-bottom: 100px; /* 間隔調整 */
-    }
-
-    .showroom-image-container {
-      position: relative;
-      height: 450px; /* 高く */
-    }
-
-    .showroom-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(110%); /* 彩度少し上げる */
-      border-radius: 0; /* 上部の角丸なし */
-      box-shadow: none; /* 画像自体の影は不要 */
-    }
-
-    .showroom-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent); /* グラデーション強く */
-      padding: 50px; /* パディング調整 */
-      color: white;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* 影強く */
-    }
-
-    .showroom-title {
-      font-size: 36px; /* 大きく */
-      font-weight: bold;
-      margin-bottom: 20px; /* 間隔調整 */
-      font-family: 'Playfair Display', serif;
-    }
-
-    .showroom-subtitle {
-      opacity: 0.9;
-      font-size: 20px; /* 大きく */
-      font-style: italic;
-    }
-
-    .showroom-content {
-      padding: 50px; /* パディング調整 */
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* 比率調整 */
-      gap: 50px; /* 間隔調整 */
-    }
-
-    .showroom-text {
-      color: #4a5568; /* 文字色調整 */
-      margin-bottom: 25px; /* 間隔調整 */
-      line-height: 1.8;
-      font-size: 17px; /* 少し大きく */
-    }
-
-    .concierge-card {
-      background: linear-gradient(135deg, #f0e6ff, #e6e6fa); /* 薄い紫系 */
-      border-radius: 16px;
-      padding: 40px; /* パディング調整 */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* 影調整 */
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #dcdcdc; /* 枠線 */
-    }
-
-    .concierge-card::before {
-      /* SVGパターンは既存のものを流用 */
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%234a0e34' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E"); /* 色調整 */
-      opacity: 0.8; /* 少し濃く */
-      z-index: 0; pointer-events: none; /* <<< この行を追加します！ */
-    }      .concierge-title {
-      font-size: 28px; /* 大きく */
-      font-weight: bold;
-      color: #5a2a99; /* 濃い紫 */
-      margin-bottom: 25px; /* 間隔調整 */
-      position: relative;
-      z-index: 1;
-      font-family: 'Playfair Display', serif;
-    }
-    .concierge-card .button-primary { /* ボタン調整 */
-        background: linear-gradient(to right, #DAA520, #B8860B);
-        box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
-    }
-     .concierge-card .button-primary:hover {
-        box-shadow: 0 10px 25px rgba(218, 165, 32, 0.6);
-        background: linear-gradient(to right, #B8860B, #DAA520);
-     }
-
-
-    /* --- ピアノご成約特典セクションのスタイル --- */
-    .premium-section {
-      background: linear-gradient(to bottom, #f0e6ff, #dcdcdc); /* 薄紫からグレーへ */
-      padding: 80px 0; /* パディング調整 */
-      margin-bottom: 100px; /* 間隔調整 */
-      border-radius: 20px; /* 角丸調整 */
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1); /* 影調整 */
-      overflow: hidden;
-      position: relative;
-    }
-
-    .premium-section::before {
-      /* SVGパターン流用・色調整 */
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%234a0e34' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-      opacity: 1;
-      z-index: 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px; /* 間隔調整 */
-      position: relative;
-    }
-
-    .section-title h2 {
-      font-size: 36px; /* 大きく */
-      font-weight: bold;
-      margin-bottom: 20px; /* 間隔調整 */
-      display: inline-block;
-      position: relative;
-      color: #4a0e34; /* 深い紫 */
-      font-family: 'Playfair Display', serif;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-
-    .section-title h2::after {
-      content: '';
-      position: absolute;
-      bottom: -15px; /* 位置調整 */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px; /* 太く */
-      background: linear-gradient(to right, #DAA520, #B8860B); /* ゴールド系 */
-      border-radius: 2px;
-      box-shadow: 0 0 8px rgba(218, 165, 32, 0.5); /* 輝き */
-    }
-
-.section-title p {
-      color: #4a5568;
-      font-size: 18px;
-      max-width: 800px;
-      margin-left: 0;  /* <<< 修正 */
-      margin-right: 0; /* <<< 修正 */
-      text-align: left; /* <<< この行を追加 */
-      /* 必要なら上下マージンを追加: 例 margin-bottom: 20px; */
-    }
-
-    /* 中古ピアノプレミアム */
-    .used-piano-premium {
-      margin-top: 60px;
-    }
-
-    .used-piano-header {
-      background: linear-gradient(to right, #f6e05e, #facc15); /* 明るい黄色グラデーション */
-      color: #78350f; /* 茶色系 */
-      padding: 18px 25px; /* パディング調整 */
-      border-radius: 12px 12px 0 0; /* 角丸調整 */
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 2px solid #ca8a04; /* 濃い黄色の線 */
-      box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3);
-    }
-
-    .used-piano-header h3 {
-      margin: 0;
-      font-size: 26px; /* 大きく */
-      font-weight: bold;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .used-piano-note {
-      font-size: 14px;
-      background: rgba(255, 255, 255, 0.4);
-      padding: 6px 12px; /* パディング調整 */
-      border-radius: 6px;
-      font-style: italic;
-    }
-
-    .choose-text {
-      text-align: center;
-      margin: 30px 0; /* 間隔調整 */
-      font-weight: bold;
-      font-size: 20px; /* 大きく */
-      color: #4a0e34; /* 深い紫 */
-      background: rgba(255, 255, 255, 0.5); /* 半透明白 */
-      padding: 15px; /* パディング調整 */
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
-      border: 1px dashed #DAA520; /* ゴールドの点線 */
-    }
-
-    .premium-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px; /* 間隔調整 */
-      margin-top: 30px; /* 間隔調整 */
-    }
-
-    .premium-card {
-      background: white;
-      border-radius: 12px; /* 角丸調整 */
-      padding: 30px 25px; /* パディング調整 */
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* 影調整 */
-      transition: all 0.3s ease;
-      height: 100%;
-      border-top: 5px solid; /* 上部に色線 */
-      position: relative; /* ホバーエフェクト用 */
-    }
-    .premium-card:hover {
-        transform: translateY(-8px) scale(1.03); /* ホバー効果 */
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* 影を強く */
-    }
-
-    .premium-card.yellow { border-color: #facc15; background: #fffbeb; } /* 黄色 */
-    .premium-card.green { border-color: #4ade80; background: #f0fdf4; } /* 緑色 */
-    .premium-card.blue { border-color: #60a5fa; background: #eff6ff; }  /* 青色 */
-
-
-    .premium-card-label {
-      font-weight: bold;
-      font-size: 24px; /* 大きく */
-      margin-bottom: 15px; /* 間隔調整 */
-      font-family: 'Playfair Display', serif;
-      display: inline-block;
-      padding: 5px 15px;
-      border-radius: 8px;
-      color: white;
-    }
-    .premium-card.yellow .premium-card-label { background: #facc15; color: #78350f; }
-    .premium-card.green .premium-card-label { background: #4ade80; color: #166534; }
-    .premium-card.blue .premium-card-label { background: #60a5fa; color: #1e40af; }
-
-    .premium-card-content {
-      font-size: 17px; /* 少し大きく */
-      color: #4a5568; /* 色調整 */
-      line-height: 1.7;
-    }
-
-    /* ピアノプレミアム */
-    .piano-premium {
-      margin-bottom: 60px; /* 間隔調整 */
-    }
-
-    .piano-premium-header {
-      background: linear-gradient(to right, #4a5568, #2d3748); /* グレー系グラデーション */
-      color: white;
-      padding: 18px 25px; /* パディング調整 */
-      border-radius: 12px 12px 0 0; /* 角丸調整 */
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 2px solid #718096; /* 濃いグレーの線 */
-      box-shadow: 0 4px 10px rgba(45, 55, 72, 0.3);
-    }
-
-    .piano-premium-header h3 {
-      margin: 0;
-      font-size: 26px; /* 大きく */
-      font-weight: bold;
-      font-family: 'Playfair Display', serif;
-      letter-spacing: 0.5px;
-    }
-
-    .piano-premium-note {
-      font-size: 14px;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-style: italic;
-    }
-
-    .premium-items {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px; /* 間隔調整 */
-      margin-top: 30px; /* 間隔調整 */
-    }
-
-    .premium-item {
-      background: white;
-      border-radius: 12px; /* 角丸調整 */
-      padding: 25px; /* パディング調整 */
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06); /* 影調整 */
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 20px; /* 間隔調整 */
-      border: 1px solid #e2e8f0; /* 枠線 */
-    }
-
-    .premium-item:hover {
-      transform: translateY(-6px); /* ホバー効果 */
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* 影を強く */
-      border-color: #cbd5e0;
-    }
-
-    .premium-item-icon {
-      width: 50px; /* 大きく */
-      height: 50px;
-      background: #edf2f7; /* 背景色 */
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: #4a5568; /* アイコン色 */
-      transition: all 0.3s ease;
-    }
-    .premium-item:hover .premium-item-icon {
-        background: #4a5568; /* ホバーで背景色変更 */
-        color: white;
-        transform: rotate(10deg); /* 傾ける */
-    }
-    .premium-item-icon svg {
-        width: 24px; height: 24px; /* サイズ調整 */
-        stroke-width: 1.5; /* 線を少し細く */
-    }
-
-    .premium-item-text {
-      font-size: 17px; /* 少し大きく */
-      color: #2d3748; /* 濃いグレー */
-      font-weight: 500; /* 少し太く */
-    }
-    /* --- ここまでピアノご成約特典セクションのスタイル --- */
-
-    /* エレクトーン展示紹介セクション */
-    #electone-lineup {
-      background: linear-gradient(135deg, #fdf4ff, #eff6ff); /* 淡いピンクと青のグラデーション */
-      padding: 100px 0; /* パディング調整 */
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px; /* 角丸調整 */
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1); /* 影調整 */
-      margin-bottom: 100px; /* 間隔調整 */
-    }
-
-    #electone-lineup::before {
-      /* SVGパターン流用・色調整 */
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%237c3aed' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
-      opacity: 1;
-      z-index: 0;
-    }
-
-    #electone-lineup .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    #electone-lineup .lineup-title { /* lineup-title共通スタイル適用 */
-      font-size: 40px;
-      font-weight: bold;
-      color: #5a2a99; /* 濃い紫 */
-      margin-bottom: 40px; /* 間隔調整 */
-      position: relative;
-      display: inline-block;
-      font-family: 'Playfair Display', serif;
-      text-align: center; /* 中央寄せ */
-      width: 100%; /* 中央寄せのため */
-    }
-
-    #electone-lineup .lineup-title::after {
-      content: '';
-      position: absolute;
-      bottom: -15px; /* 位置調整 */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px; /* 太く */
-      background: linear-gradient(to right, #a855f7, #7c3aed); /* 紫系グラデーション */
-      border-radius: 2px;
-      box-shadow: 0 0 8px rgba(124, 58, 237, 0.5); /* 輝き */
-    }
-
-#electone-lineup p {
-      line-height: 1.8;
-      margin-bottom: 40px;
-      font-size: 17px;
-      color: #4a5568;
-      text-align: left; /* 左寄せ */
-      max-width: 700px; /* 最大幅は維持してもOK */
-      margin-left: 0;  /* ← 修正 */
-      margin-right: 0; /* ← 修正 */
-    }
-
-    #electone-lineup strong {
-      color: #7c3aed; /* 紫 */
-      font-weight: 700;
-    }
-
-    #electone-lineup .table-container {
-      margin-bottom: 50px; /* 間隔調整 */
-      border-radius: 16px; /* 角丸 */
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08); /* 影 */
-      border: 1px solid #e5e7eb;
-      background: white; /* 背景色 */
-    }
-
-    #electone-lineup table {
-      /* テーブルコンテナでスタイル指定するため削除 */
-    }
-
-    #electone-lineup th {
-      background: linear-gradient(to bottom, #f3e8ff, #e9d5ff); /* 薄い紫グラデーション */
-      color: #581c87; /* 濃い紫 */
-      font-weight: bold;
-      padding: 18px; /* パディング調整 */
-      text-align: left;
-      font-size: 15px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border-bottom: 2px solid #c084fc; /* 紫の線 */
-    }
-
-    #electone-lineup td {
-      padding: 18px; /* パディング調整 */
-      border-top: 1px solid #f3e8ff; /* 線を薄く */
-      font-size: 16px;
-      vertical-align: middle;
-    }
-     #electone-lineup tr:hover {
-       background-color: #faf5ff; /* 薄紫ホバー */
-     }
-
-
-    #electone-lineup td img {
-      max-height: 110px; /* 少し大きく */
-      border-radius: 10px; /* 角丸調整 */
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 影 */
-    }
-
-    #electone-lineup td img:hover {
-      transform: scale(1.1) rotate(-3deg); /* ホバー効果 */
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* 影を強く */
-    }
-
-    /* エレクトーンご成約プレミアム紹介セクション */
-    #electone-gift {
-      background: linear-gradient(to bottom, #eff6ff, #dbeafe); /* 淡い青グラデーション */
-      padding: 100px 0; /* パディング調整 */
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px; /* 角丸調整 */
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1); /* 影調整 */
-      margin-bottom: 100px; /* 間隔調整 */
-    }
-
-    #electone-gift::before {
-       /* SVGパターン流用・色調整 */
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%230ea5e9' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
-      opacity: 1;
-      z-index: 0;
-    }
-
-    #electone-gift .container {
-      position: relative;
-      z-index: 1;
-    }  /* ▼▼▼ ここから追加 ▼▼▼ */
-/* エレクトーンご成約プレミアム紹介セクション の画像スタイル */
-#electone-gift img {
-  border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  margin: 0 auto; /* 中央寄せ */
-  border: 3px solid white;
-  display: block; /* margin: auto を確実に効かせるため */
-  max-width: 700px; /* <<< PCでの画像の最大幅を指定 (この値を調整) */
-  width: 100%; /* <<< 親要素に合わせて伸縮、ただしmax-widthを超えない */
-}
-
-/* ホバーエフェクト */
-#electone-gift img:hover {
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
-}
-/* ▲▲▲ ここまで追加 ▲▲▲ */
-
-    #electone-gift .lineup-title { /* lineup-title共通スタイル適用 */
-      font-size: 40px;
-      font-weight: bold;
-      color: #0369a1; /* 濃い青 */
-      margin-bottom: 40px; /* 間隔調整 */
-      position: relative;
-      display: inline-block;
-      font-family: 'Playfair Display', serif;
-      text-align: center; /* 中央寄せ */
-      width: 100%; /* 中央寄せのため */
-    }
-
-    #electone-gift .lineup-title::after {
-      content: '';
-      position: absolute;
-      bottom: -15px; /* 位置調整 */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px; /* 太く */
-      background: linear-gradient(to right, #38bdf8, #0ea5e9); /* 青系グラデーション */
-      border-radius: 2px;
-      box-shadow: 0 0 8px rgba(14, 165, 233, 0.5); /* 輝き */
-    }
-
-   #electone-gift p {
-      line-height: 1.8;
-      margin-bottom: 40px;
-      font-size: 17px;
-      color: #374151;
-      text-align: left; /* 左寄せ */
-      max-width: 700px; /* 最大幅は維持してもOK */
-      margin-left: 0; /* 左マージンをリセット */
-      margin-right: 0; /* 右マージンをリセット */
-    }
-
-    #electone-gift ul {
-      background: rgba(255, 255, 255, 0.7); /* 半透明白 */
-      border-radius: 16px;
-      padding: 35px 50px; /* パディング調整 */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* 影調整 */
-      margin-bottom: 50px; /* 間隔調整 */
-      list-style: none;
-      max-width: 500px; /* 最大幅 */
-      margin-left: auto;
-      margin-right: auto;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-    }
-
-    #electone-gift li {
-      margin-bottom: 18px; /* 間隔調整 */
-      position: relative;
-      padding-left: 30px; /* アイコンスペース */
-      font-size: 18px; /* 少し大きく */
-      color: #1e3a8a; /* 濃い青 */
-      font-weight: 500;
-    }
-    #electone-gift li:last-child {
-        margin-bottom: 0;
-    }
-
-    #electone-gift li::before {
-      content: '🎁'; /* プレゼントアイコンに変更 */
-      position: absolute;
-      left: 0;
-      top: -2px; /* 位置調整 */
-      font-size: 20px; /* アイコンサイズ */
-    }
-
-    #electone-gift img {
-      border-radius: 16px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); /* 影強く */
-      transition: all 0.3s ease;
-      margin: 0 auto;
-      border: 3px solid white; /* 白い枠線 */
-    }
-
-    #electone-gift img:hover {
-      transform: translateY(-8px) scale(1.05); /* ホバー効果 */
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25); /* 影さらに強く */
-    }
-
-    /* お問い合わせ */
-    .contact {
-      background: white;
-      border-radius: 20px; /* 角丸調整 */
-      padding: 80px 50px; /* パディング調整 */
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12); /* 影調整 */
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #e2e8f0;
-    }
-
-    .contact::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 8px; /* 太く */
-      background: linear-gradient(to right, #DAA520, #B8860B, #7c3aed, #4a0e34); /* ゴールドから紫へ */
-    }
-
-    .contact-title { /* lineup-title共通スタイル適用 */
-      font-size: 40px;
-      font-weight: bold;
-      color: #1a202c;
-      margin-bottom: 50px; /* 間隔調整 */
-      position: relative;
-      display: inline-block;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .contact-title::after {
-      content: '';
-      position: absolute;
-      bottom: -15px; /* 位置調整 */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px; /* 太く */
-      background: linear-gradient(to right, #DAA520, #7c3aed); /* ゴールドと紫 */
-      border-radius: 2px;
-      box-shadow: 0 0 8px rgba(124, 58, 237, 0.4); /* 輝き */
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 35px; /* 間隔調整 */
-      margin-bottom: 50px; /* 間隔調整 */
-    }
-
-    .contact-card {
-      background: #f7fafc; /* 背景色 */
-      border: 1px solid #e2e8f0;
-      border-radius: 16px; /* 角丸調整 */
-      padding: 35px 30px; /* パディング調整 */
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-    }
-
-    .contact-card:hover {
-      transform: translateY(-8px) scale(1.03); /* ホバー効果 */
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* 影強く */
-      border-color: #cbd5e0;
-    }
-
-    .contact-icon {
-      width: 70px; /* 大きく */
-      height: 70px;
-      margin: 0 auto 25px; /* 間隔調整 */
-      padding: 18px; /* パディング調整 */
-      border-radius: 50%;
-      transition: all 0.3s ease;
-    }
-    /* 各カードでグラデーション背景とアイコン色 */
-    .contact-card:nth-child(1) .contact-icon { background: linear-gradient(135deg, #fda4af, #f472b6); color: #831843; } /* ピンク系 */
-    .contact-card:nth-child(2) .contact-icon { background: linear-gradient(135deg, #a78bfa, #8b5cf6); color: #4c1d95; } /* 紫系 */
-    .contact-card:nth-child(3) .contact-icon { background: linear-gradient(135deg, #7dd3fc, #38bdf8); color: #075985; } /* 青系 */
-
-    .contact-card:hover .contact-icon {
-        transform: rotate(-15deg) scale(1.1); /* ホバーで傾き・拡大 */
-    }
-    .contact-icon svg {
-        width: 100%; height: 100%; stroke-width: 1.5;
-        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2)); /* アイコンに影 */
-    }
-
-    .contact-card-title {
-      font-weight: bold;
-      font-size: 22px; /* 大きく */
-      margin-bottom: 15px; /* 間隔調整 */
-      color: #1a202c;
-    }
-
-    .contact-card-text {
-      font-size: 16px;
-      color: #4a5568;
-      margin-bottom: 25px; /* 間隔調整 */
-    }
-    .contact-card .button-outline { /* ボタン調整 */
-        font-size: 15px;
-        padding: 12px 28px;
-    }
-    /* 各ボタンの色調整 */
-    .contact-card:nth-child(1) .button-outline { color: #f472b6; border-color: #f472b6; }
-    .contact-card:nth-child(1) .button-outline:hover { background: #f472b6; color: white; box-shadow-color: rgba(244, 114, 182, 0.3); }
-    .contact-card:nth-child(1) .button-outline svg { stroke: #f472b6; }
-    .contact-card:nth-child(1) .button-outline:hover svg { stroke: white; }
-
-    .contact-card:nth-child(2) .button-outline { color: #8b5cf6; border-color: #8b5cf6; }
-    .contact-card:nth-child(2) .button-outline:hover { background: #8b5cf6; color: white; box-shadow-color: rgba(139, 92, 246, 0.3); }
-    .contact-card:nth-child(2) .button-outline svg { stroke: #8b5cf6; }
-    .contact-card:nth-child(2) .button-outline:hover svg { stroke: white; }
-
-    .contact-card:nth-child(3) .button-outline { color: #38bdf8; border-color: #38bdf8; }
-    .contact-card:nth-child(3) .button-outline:hover { background: #38bdf8; color: white; box-shadow-color: rgba(56, 189, 248, 0.3); }
-    .contact-card:nth-child(3) .button-outline svg { stroke: #38bdf8; }
-    .contact-card:nth-child(3) .button-outline:hover svg { stroke: white; }
-
-    .contact .button-primary { /* 下部の予約ボタン */
-        background: linear-gradient(to right, #DAA520, #B8860B);
-        box-shadow: 0 8px 25px rgba(218, 165, 32, 0.4);
-        margin-top: 10px; /* 少し上にマージン */
-    }
-    .contact .button-primary:hover {
-        box-shadow: 0 12px 30px rgba(218, 165, 32, 0.6);
-        background: linear-gradient(to right, #B8860B, #DAA520);
-    }
-
-
-    /* フッター */
-    footer {
-      background: linear-gradient(135deg, #1f2937, #111827); /* ダークグレー系 */
-      color: #d1d5db; /* 明るいグレー */
-      padding: 80px 0 40px; /* パディング調整 */
-      margin-top: 100px; /* 間隔調整 */
-      position: relative;
-    }
-
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 6px; /* 太く */
-      background: linear-gradient(to right, #DAA520, #B8860B, #DAA520); /* ゴールド系 */
-      box-shadow: 0 0 15px rgba(218, 165, 32, 0.6); /* 輝き */
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 40px; /* 間隔調整 */
-    }
-
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 18px; /* 間隔調整 */
-    }
-     .footer-logo svg { /* ロゴアイコン色調整 */
-        fill: #DAA520; /* ゴールド */
-        filter: drop-shadow(0 0 5px rgba(218, 165, 32, 0.7));
-     }
-
-    .footer-logo-text {
-      font-size: 28px; /* 大きく */
-      font-weight: bold;
-      font-family: 'Playfair Display', serif;
-      color: #f3f4f6; /* 少し明るく */
-      letter-spacing: 0.5px;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 18px; /* 間隔調整 */
-    }
-
-    .footer-social-icon {
-      width: 44px; /* 大きさ調整 */
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(255, 255, 255, 0.05); /* 背景調整 */
-      border-radius: 50%;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .footer-social-icon svg { /* アイコン色調整 */
-        fill: #9ca3af;
-        transition: fill 0.3s ease;
-    }
-
-    .footer-social-icon:hover {
-      background-color: rgba(218, 165, 32, 0.8); /* ホバーでゴールド背景 */
-      transform: translateY(-4px) scale(1.1); /* ホバー効果 */
-      border-color: #DAA520;
-      box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4);
-    }
-     .footer-social-icon:hover svg {
-        fill: white; /* ホバーでアイコン白 */
-     }
-
-    .copyright {
-      font-size: 15px; /* 少し大きく */
-      color: #9ca3af; /* 色調整 */
-    }
-
-    /* レスポンシブデザイン */
-    /* 基本的なレイアウト調整は既存のものを踏襲しつつ、ゴージャス化で追加した要素の調整 */
-
-    @media (max-width: 1024px) {
-      .hero-title { font-size: 56px; }
-      .hero-subtitle { font-size: 26px; }
-      .hero-date { font-size: 22px; }
-      .features { grid-template-columns: 1fr; gap: 30px;} /* 1列に */
-      .event-grid { grid-template-columns: 1fr; gap: 30px; }
-      .access-grid { grid-template-columns: 1fr; gap: 20px; }
-      .showroom-content { grid-template-columns: 1fr; gap: 40px; }
-      .premium-cards, .premium-items { grid-template-columns: repeat(2, 1fr); } /* 特典カードは2列維持 */
-      .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; } /* 問い合わせカードは2列 */
-    }
-
-    @media (max-width: 768px) {
-      body { line-height: 1.6; }
-      .logo-text { font-size: 26px; }
-      .hero-image-container { height: 550px; margin-bottom: -40px; }
-      .hero-title { font-size: 42px; letter-spacing: 2px; }
-      .hero-subtitle { font-size: 22px; }
-      .hero-date { font-size: 18px; padding: 12px 30px; }
-      .card { padding: 40px 30px; }
-      .card-title { font-size: 28px; }
-      .features { gap: 25px; margin-bottom: 40px;}
-      .event-details { padding: 60px 30px; }
-      .event-title { font-size: 32px; margin-bottom: 50px;}
-      .event-card, .access-card { padding: 30px; }
-      .event-card-title { font-size: 20px; }
-      .access-title { font-size: 22px; }
-      .lineup-title { font-size: 32px; }
-      .tabs { margin-bottom: 30px; }
-      .tab { padding: 20px; font-size: 16px;}
-      .tab-content { padding: 40px 30px; }
-      .piano-type { font-size: 22px; }
-      th, td { padding: 15px; }
-      .showroom-image-container { height: 400px; }
-      .showroom-overlay { padding: 40px 30px; }
-      .showroom-title { font-size: 28px; }
-      .showroom-content { padding: 40px 30px; gap: 30px;}
-      .concierge-card { padding: 35px; }
-      .concierge-title { font-size: 24px; }
-      /* 特典セクション */
-      .premium-section { padding: 60px 0; }
-      .section-title h2 { font-size: 30px; }
-      .used-piano-header, .piano-premium-header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 15px 20px; }
-      .used-piano-header h3, .piano-premium-header h3 { font-size: 22px; }
-      .choose-text { font-size: 18px; margin: 25px 0; }
-      .premium-cards, .premium-items { grid-template-columns: 1fr; gap: 20px; } /* 1列に */
-      .premium-card, .premium-item { padding: 25px; }
-      /* エレクトーンセクション */
-      #electone-lineup, #electone-gift { padding: 80px 0; }
-      #electone-lineup .lineup-title, #electone-gift .lineup-title { font-size: 32px; }
-      #electone-lineup table { display: block; width: 100%; }
-      #electone-lineup thead { display: none; }
-      #electone-lineup tbody { display: block; width: 100%; }
-      #electone-lineup tr { display: block; margin-bottom: 1.5rem; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-      #electone-lineup td { display: block; text-align: left; padding: 0.75rem 0 0.75rem 100px; border: none; position: relative; font-size: 15px;}
-      #electone-lineup td:before { content: attr(data-label); font-weight: bold; color: #581c87; position: absolute; left: 1rem; top: 0.75rem; width: 80px; text-align: left; font-size: 14px;}
-      #electone-lineup td img { margin: 0; max-height: 90px; }
-      #electone-lineup td[data-label="画像"] { padding-left: 1rem; }
-      #electone-lineup td[data-label="画像"]::before { display: none; }
-      #electone-gift ul { padding: 30px 40px; }
-      #electone-gift li { font-size: 16px; padding-left: 25px;}
-      #electone-gift li::before { left: 0; }
-      /* 問い合わせ */
-      .contact { padding: 60px 30px; }
-      .contact-title { font-size: 32px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 25px; }
-      .contact-card { padding: 30px; }
-      .contact-card-title { font-size: 20px; }
-      /* フッター */
-      .footer-content { flex-direction: column; gap: 30px; text-align: center; }
-      .footer-left { flex-direction: column; gap: 25px; }
-      .footer-logo-text { font-size: 24px; }
-      /* ヘッダー右側非表示 */
-      .header-right { display: none; }
-      .header-content { justify-content: center; }
-    }
-
-    @media (max-width: 480px) {
-      .container { padding: 0 16px; }
-      .section { margin-bottom: 80px; }
-      .hero-image-container { height: 450px; }
-      .hero-title { font-size: 34px; letter-spacing: 1px; }
-      .hero-subtitle { font-size: 18px; }
-      .hero-date { font-size: 16px; padding: 10px 25px; }
-      .card { padding: 30px 20px; border-radius: 16px; }
-      .card-title { font-size: 24px; }
-      .card-text { font-size: 16px; }
-      .features { gap: 20px;}
-      .feature-card { padding: 25px; border-radius: 12px;}
-      .feature-icon { width: 60px; height: 60px; padding: 15px; margin-bottom: 20px;}
-      .feature-title { font-size: 18px; }
-      .feature-description { font-size: 15px; }
-      .button { padding: 15px 30px; font-size: 15px; gap: 10px;}
-      .button-outline { padding: 13px 28px; }
-      .event-details { padding: 50px 20px; border-radius: 16px;}
-      .event-title { font-size: 28px; }
-      .event-grid { gap: 25px; }
-      .event-card, .access-card { padding: 25px; border-radius: 12px;}
-      .icon-circle { width: 55px; height: 55px; }
-      .icon-circle svg { width: 24px; height: 24px;}
-      .event-card-title { font-size: 18px; }
-      .event-card p, .access-item p { font-size: 15px; }
-      .access-title { font-size: 20px; }
-      .access-icon { width: 40px; height: 40px; }
-      .access-icon svg { width: 18px; height: 18px; }
-      .lineup-title { font-size: 28px; }
-      .badge { font-size: 16px; padding: 8px 20px; }
-      .divider { width: 80px; height: 4px;}
-      .tabs { border-radius: 12px;}
-      .tab { padding: 18px; font-size: 15px;}
-      .tab-content { padding: 30px 20px; border-radius: 12px;}
-      .piano-type { font-size: 20px; }
-      th, td { padding: 12px; font-size: 14px;}
-      #electone-lineup td { font-size: 14px; padding: 0.6rem 0 0.6rem 90px;}
-      #electone-lineup td:before { top: 0.6rem; width: 70px; font-size: 13px;}
-      #electone-lineup td img { max-height: 80px; }
-      .sold-location { font-size: 13px; }
-      .highlight { padding: 10px 15px; font-size: 15px; margin-bottom: 20px;}
-      .showroom { border-radius: 16px; }
-      .showroom-image-container { height: 350px; }
-      .showroom-overlay { padding: 30px 20px; }
-      .showroom-title { font-size: 24px; }
-      .showroom-content { padding: 30px 20px; }
-      .showroom-text { font-size: 16px; }
-      .concierge-card { padding: 30px 25px; border-radius: 12px;}
-      .concierge-title { font-size: 22px; }
-      /* 特典セクション */
-      .premium-section { padding: 50px 0; border-radius: 16px;}
-      .section-title h2 { font-size: 26px; }
-      .section-title p { font-size: 16px; }
-      .used-piano-header h3, .piano-premium-header h3 { font-size: 20px; }
-      .choose-text { font-size: 16px; padding: 12px; }
-      .premium-card-label { font-size: 20px; }
-      .premium-card-content, .premium-item-text { font-size: 16px; }
-      /* エレクトーンセクション */
-      #electone-lineup, #electone-gift { padding: 60px 0; border-radius: 16px;}
-      #electone-lineup .lineup-title, #electone-gift .lineup-title { font-size: 28px; }
-      #electone-gift ul { padding: 25px 30px; border-radius: 12px;}
-      #electone-gift li { font-size: 16px; padding-left: 25px;}
-      /* 問い合わせ */
-      .contact { padding: 50px 20px; border-radius: 16px;}
-      .contact-title { font-size: 28px; }
-      .contact-grid { gap: 20px; }
-      .contact-card { padding: 25px 20px; border-radius: 12px;}
-      .contact-icon { width: 60px; height: 60px; padding: 15px; margin-bottom: 20px;}
-      .contact-card-title { font-size: 18px; }
-      .contact-card-text { font-size: 15px; }
-      .contact-card .button-outline { font-size: 14px; padding: 10px 24px;}
-      /* フッター */
-      footer { padding: 60px 0 30px; }
-      .footer-logo-text { font-size: 22px; }
-      .footer-social-icon { width: 40px; height: 40px; }
-      .copyright { font-size: 14px; }
-    }
-/* ヘッダーのソーシャルアイコンのスタイルを強制上書き */
-header .social-icon svg * { /* SVG内の全要素に適用 */
-    stroke: white !important; /* 線を白に */
-    fill: none !important;    /* 塗りをなしに */
-    stroke-width: 2px !important; /* 線幅を2pxに */
-}
-
-/* Xアイコンの fill が不要な場合（上記の * で fill:none が効いていれば不要） */
-header .social-icon svg path {
-     fill: none !important;
-}
+    /* CSSはこちらに貼り付けます */
   </style>
 </head>
 <body>
@@ -1866,12 +24,28 @@ header .social-icon svg path {
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <!-- スティッキーCTAコンテナ -->
+  <div class="sticky-cta-container">
+    <a href="tel:0740222063" class="sticky-cta-button sticky-cta-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>電話する</span>
+    </a>
+    <a href="https://www.toriimusic.co.jp/25682/" class="sticky-cta-button sticky-cta-contact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+      </svg>
+      <span>お問い合わせ</span>
+    </a>
+  </div>
+
   <!-- ヘッダー -->
   <header>
     <div class="container">
       <div class="header-content">
         <div class="logo">
-          <svg class="logo-icon" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke="none"> <!-- アイコンサイズ調整 -->
+          <svg class="logo-icon" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke="none">
             <path d="M19.118 2.882a2.18 2.18 0 0 0-2.18.002l-6.56 3.789V5.5a2.18 2.18 0 0 0-4.36 0v13a2.18 2.18 0 1 0 4.36 0v-1.673l6.56 3.788a2.18 2.18 0 0 0 2.18.001l2.18-1.26a2.18 2.18 0 0 0 1.09-1.89V6.03a2.18 2.18 0 0 0-1.09-1.89l-2.18-1.258zM8.198 18.5a.9.9 0 1 1-1.8 0V5.5a.9.9 0 1 1 1.8 0v13zm9.82-1.258a.9.9 0 0 1-.485.136.9.9 0 0 1-.9-.135l-6.56-3.788V7.939l6.56-3.788a.9.9 0 0 1 .9-.135.9.9 0 0 1 .485.135l2.18 1.26a.9.9 0 0 1 .45.78v8.18a.9.9 0 0 1-.45.78l-2.18 1.259z"/>
           </svg>
           <h1 class="logo-text">ヤマハ特約店 株式会社 トリイ </h1>
@@ -1879,7 +53,6 @@ header .social-icon svg path {
         <div class="header-right">
         <div class="social-icons">
             <a href="https://www.instagram.com/torii__music/" target="_blank" class="social-icon" aria-label="Instagram">
-              <!-- Instagramアイコン: fill="none" と stroke="white" を明示的に指定 -->
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -1887,9 +60,7 @@ header .social-icon svg path {
               </svg>
             </a>
             <a href="https://x.com/toriimusic" target="_blank" class="social-icon" aria-label="X (Twitter)">
-              <!-- X(Twitter)アイコン: fill="none" と stroke="white" を明示的に指定 -->
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                 <!-- Xのパスデータを線画に適したものに変更 -->
                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
               </svg>
             </a>
@@ -1914,17 +85,17 @@ header .social-icon svg path {
         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E9%BB%84%E8%89%B2%E3%81%A8%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%A0%E8%89%B2%20%E5%86%99%E7%9C%9F%20%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AA%E3%82%A2%20%E5%B0%8F%E5%A3%B2%E3%82%8A%E5%BA%97%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88-wQyJfPlwQQ9ZvbrTZgZ7deBk3UCyFO.png" alt="アーリーサマーセール" class="hero-image">
         <div class="hero-text">
           <h2 class="hero-title">Earlysummer SALE 2025</h2>
-          <p class="hero-subtitle">響き合う音との、至高の出会い</p> <!-- 微調整 -->
+          <p class="hero-subtitle">響き合う音との、至高の出会い</p>
           <div class="hero-date">2025年6月21日(土)〜22日(日)</div>
         </div>
       </div>
 
       <div class="card">
-        <h3 class="card-title">県内最大級の展示数を誇る、選ばれし音色</h3> <!-- 微調整 -->
+        <h3 class="card-title">県内最大級の展示数を誇る、選ばれし音色</h3>
         <p class="card-text">
           株式会社トリイは、滋賀県内最大級、約30台のピアノ・エレクトーンを展示するヤマハ特約店。
           経験豊かなコンサートチューナーが厳選し、丹念に調整を施した楽器のみを取り揃え、お客様に最高の音楽体験と安心をお約束いたします。
-        </p> <!-- 微調整 -->
+        </p>
 
         <div class="features">
           <div class="feature-card">
@@ -1954,7 +125,7 @@ header .social-icon svg path {
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
             </svg>
             </div>
-            <h4 class="feature-title">限定特別価格</h4> <!-- 微調整 -->
+            <h4 class="feature-title">限定特別価格</h4>
             <p class="feature-description">アーリーサマーセールだけの特別な価値</p>
           </div>
         </div>
@@ -1982,7 +153,7 @@ header .social-icon svg path {
     <!-- イベント詳細 -->
     <section class="section">
       <div class="event-details">
-        <h3 class="event-title">セール詳細情報</h3> <!-- 微調整 -->
+        <h3 class="event-title">セール詳細情報</h3>
 
         <div class="event-grid">
           <div class="event-card">
@@ -1997,7 +168,7 @@ header .social-icon svg path {
               <p>
                 ㈱トリイ今津本店<br>
                 滋賀県高島市今津町名小路１－１<br>
-                （JR湖西線 近江今津駅前すぐ） <!-- 微調整 -->
+                （JR湖西線 近江今津駅前すぐ）
               </p>
             </div>
           </div>
@@ -2012,7 +183,7 @@ header .social-icon svg path {
               </svg>
             </div>
             <div>
-              <h4 class="event-card-title pink">開催日時</h4> <!-- 微調整 -->
+              <h4 class="event-card-title pink">開催日時</h4>
               <p>
                 2025年6月21日(土) 〜 22日(日)<br>
                 営業時間 10:30 - 19:30
@@ -2058,8 +229,8 @@ header .social-icon svg path {
     <!-- 商品ラインナップ -->
     <section class="section">
       <div class="lineup-header">
-        <span class="badge">特別価格ラインナップ</span> <!-- 微調整 -->
-        <h2 class="lineup-title">ピアノ・セレクション</h2> <!-- 微調整 -->
+        <span class="badge">特別価格ラインナップ</span>
+        <h2 class="lineup-title">ピアノ・セレクション</h2>
         <div class="divider"></div>
       </div>
 
@@ -2069,8 +240,8 @@ header .social-icon svg path {
       </div>
 
       <div class="tab-content active" id="upright">
-        <span class="highlight">アップライトピアノ（詳細は品番をクリック。厳選中古品リスト）</span> <!-- 微調整 -->
-        <h3 class="piano-type">U1、U2モデル</h3> <!-- 微調整 -->
+        <span class="highlight">アップライトピアノ（詳細は品番をクリック。厳選中古品リスト）</span>
+        <h3 class="piano-type">U1、U2モデル</h3>
         <div class="table-container">
           <table>
             <thead>
@@ -2078,20 +249,20 @@ header .social-icon svg path {
                 <th>メーカー</th>
                 <th>品番</th>
                 <th>販売価格（税込）</th>
-                <th>状態・備考</th> <!-- 微調整 -->
+                <th>状態・備考</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>エテルナ</td>
                 <td>E2D</td>
-                <td>￥200,000 (税込 ¥220,000)</td> <!-- 微調整 -->
+                <td>￥200,000 (税込 ¥220,000)</td>
                 <td><span class="sold">調整中</span></td>
               </tr>
               <tr>
                 <td>ヤマハ</td>
                 <td>U1H</td>
-                <td>￥340,000 (税込 ¥374,000)</td> <!-- 微調整 -->
+                <td>￥340,000 (税込 ¥374,000)</td>
                 <td><span class="sold">調整中</span></td>
               </tr>
               <tr>
@@ -2122,7 +293,7 @@ header .social-icon svg path {
                 <td>ヤマハ</td>
                 <td>UX1</td>
                 <td>￥420,000 (税込 ¥462,000)</td>
-                <td>X支柱モデル</td> <!-- 備考追加例 -->
+                <td>X支柱モデル</td>
               </tr>
               <tr>
                 <td>ヤマハ</td>
@@ -2140,13 +311,13 @@ header .social-icon svg path {
                 <td><del>ヤマハ</del></td>
                 <td><del><a href="https://www.toriimusic.co.jp/11440/">YU10SB</a></del></td>
                 <td><del>￥520,000 (税込 ¥572,000)</del></td>
-                <td><span class="sold">売約済</span><span class="sold-location">（福井県小浜市）</span> サイレント機能付</td><!-- 備考追加例 -->
+                <td><span class="sold">売約済</span><span class="sold-location">（福井県小浜市）</span> サイレント機能付</td>
               </tr>
               </tbody>
           </table>
         </div>
 
-        <h3 class="piano-type">U3モデル</h3> <!-- 微調整 -->
+        <h3 class="piano-type">U3モデル</h3>
         <div class="table-container">
           <table>
             <thead>
@@ -2218,7 +389,7 @@ header .social-icon svg path {
       </div>
 
       <div class="tab-content" id="grand">
-        <span class="highlight">グランドピアノ（詳細は品番をクリック。厳選中古品リスト）</span> <!-- 微調整 -->
+        <span class="highlight">グランドピアノ（詳細は品番をクリック。厳選中古品リスト）</span>
         <div class="table-container">
           <table>
             <thead>
@@ -2252,16 +423,16 @@ header .social-icon svg path {
     <section class="section">
       <div class="showroom">
         <div class="showroom-image-container">
-          <img src="https://www.toriimusic.co.jp/wp/wp-content/uploads/5-259.png" alt="トリイミュージック展示場" class="showroom-image"> <!-- alt属性微調整 -->
+          <img src="https://www.toriimusic.co.jp/wp/wp-content/uploads/5-259.png" alt="トリイミュージック展示場" class="showroom-image">
           <div class="showroom-overlay">
-            <h2 class="showroom-title">滋賀県最大級 ヤマハ認定ピアノ展示場</h2> <!-- 微調整 -->
-            <p class="showroom-subtitle">約30台の厳選されたピアノとエレクトーンが並ぶ空間</p> <!-- 微調整 -->
+            <h2 class="showroom-title">滋賀県最大級 ヤマハ認定ピアノ展示場</h2>
+            <p class="showroom-subtitle">約30台の厳選されたピアノとエレクトーンが並ぶ空間</p>
           </div>
         </div>
 
         <div class="showroom-content">
           <div>
-             <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; color: #4a0e34; margin-bottom: 20px;">半世紀以上の信頼と実績</h3> <!-- 見出し追加 -->
+             <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; color: #4a0e34; margin-bottom: 20px;">半世紀以上の信頼と実績</h3>
             <p class="showroom-text">
               ヤマハピアノ特約店 株式会社トリイは、昭和42年の会社設立以来、ピアノ専門店として高品質な楽器の販売と丁寧なメンテナンスを追求し、地域のお客様に愛され続けてまいりました。
             </p>
@@ -2271,14 +442,14 @@ header .social-icon svg path {
           </div>
 
           <div class="concierge-card">
-            <h3 class="concierge-title">ピアノコンシェルジュがご案内</h3> <!-- 微調整 -->
+            <h3 class="concierge-title">ピアノコンシェルジュがご案内</h3>
             <p class="showroom-text">
               セール期間中は、ピアノを知り尽くした専門スタッフと経験豊富なコンサートチューナーが、お客様一人ひとりのご要望に合わせた最適な一台選びを心を込めてサポートいたします。
             </p>
             <p class="showroom-text">
               新品と中古ピアノの違い、電子ピアノとアコースティックピアノの特性、選び方のポイントなど、どんな些細な疑問にも丁寧にお答えします。お気軽にご相談ください。
             </p>
-            <a href="https://www.toriimusic.co.jp/tyouritsu/" class="button button-primary">調律・メンテナンスについて</a> <!-- ボタンテキスト変更 -->
+            <a href="https://www.toriimusic.co.jp/tyouritsu/" class="button button-primary">調律・メンテナンスについて</a>
           </div>
         </div>
       </div>
@@ -2288,14 +459,13 @@ header .social-icon svg path {
     <section class="premium-section section" id="piano-premium">
         <div class="container">
           <div class="section-title">
-            <h2>ピアノご成約 豪華特典</h2> <!-- 微調整 -->
-            <p>期間中にピアノをご成約のお客様へ、心を込めたプレミアム特典をご用意</p> <!-- 微調整 -->
+            <h2>ピアノご成約 豪華特典</h2>
+            <p>期間中にピアノをご成約のお客様へ、心を込めたプレミアム特典をご用意</p>
           </div>
 
-          <!-- ピアノプレミアム -->
           <div class="piano-premium">
             <div class="piano-premium-header">
-              <h3>Piano Premium <span style="font-size: 18px; font-weight: normal; opacity: 0.8;">(For All Acoustic Pianos)</span></h3> <!-- 微調整 -->
+              <h3>Piano Premium <span style="font-size: 18px; font-weight: normal; opacity: 0.8;">(For All Acoustic Pianos)</span></h3>
               <div class="piano-premium-note">アコースティックピアノご購入者様 全員へ</div>
             </div>
 
@@ -2353,19 +523,18 @@ header .social-icon svg path {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                   </svg>
                 </div>
-                <div class="premium-item-text">納入時の調律１回</div> <!-- 微調整 -->
+                <div class="premium-item-text">納入時の調律１回</div>
               </div>
             </div>
           </div>
 
-          <!-- 中古ピアノプレミアム -->
           <div class="used-piano-premium">
             <div class="used-piano-header">
-              <h3>Used Piano Premium <span style="font-size: 18px; font-weight: normal; opacity: 0.8;">(Choice)</span></h3> <!-- 微調整 -->
-              <div class="used-piano-note">※税込22万円以上の中古ピアノご成約者様限定</div> <!-- 金額微調整 -->
+              <h3>Used Piano Premium <span style="font-size: 18px; font-weight: normal; opacity: 0.8;">(Choice)</span></h3>
+              <div class="used-piano-note">※税込22万円以上の中古ピアノご成約者様限定</div>
             </div>
 
-            <div class="choose-text">さらに、下記 A・B・C より 1つ プレゼント！</div> <!-- 微調整 -->
+            <div class="choose-text">さらに、下記 A・B・C より 1つ プレゼント！</div>
 
             <div class="premium-cards">
               <div class="premium-card yellow">
@@ -2391,13 +560,13 @@ header .social-icon svg path {
     <!-- エレクトーン展示紹介セクション -->
     <section class="section" id="electone-lineup">
       <div class="container">
-        <h2 class="lineup-title">エレクトーン・ギャラリー</h2> <!-- 微調整 -->
+        <h2 class="lineup-title">エレクトーン・ギャラリー</h2>
         <p>
           店頭では最新のコンサートモデル <strong>ELS-02C</strong> を常設展示しております。
           スタンダードモデルELS-02はELS-02Cにて機能をご説明可能です。
           また、お子様にも人気のベーシックモデル <strong>ELB-02</strong> も各教室にてご覧いただけます。
           <span style="font-size: 14px; color: #718096;">※ポータブルモデル <strong>ELC-02</strong> の展示はございません。</span>
-        </p> <!-- 微調整 -->
+        </p>
 
         <div class="table-container">
           <table>
@@ -2405,8 +574,8 @@ header .social-icon svg path {
               <tr>
                 <th>型番</th>
                 <th>特徴</th>
-                <th>主な展示場所</th> <!-- 微調整 -->
-                <th>製品イメージ</th> <!-- 微調整 -->
+                <th>主な展示場所</th>
+                <th>製品イメージ</th>
               </tr>
             </thead>
             <tbody>
@@ -2446,10 +615,10 @@ header .social-icon svg path {
         <h2 class="lineup-title">エレクトーンご成約プレミアム</h2>
         <p>
           セール期間中にエレクトーン(新品)をご成約いただいたお客様限定の特典です。
-        </p> <!-- 微調整 -->
+        </p>
         <ul style="max-width: 480px; margin: 0 auto 2rem;">
-          <li>動作確認済み エレクトーン専用USBメモリ</li> <!-- 微調整 -->
-          <li>高音質ステレオヘッドホン (練習に最適！)</li> <!-- 微調整 -->
+          <li>動作確認済み エレクトーン専用USBメモリ</li>
+          <li>高音質ステレオヘッドホン (練習に最適！)</li>
         </ul>
         <div style="text-align: center;">
           <img src="https://www.toriimusic.co.jp/wp/wp-content/uploads/エレクトーンご成約プレミアムメモリ＆楽譜-1.png" alt="エレクトーン成約特典 USBメモリとヘッドホン">
@@ -2460,7 +629,7 @@ header .social-icon svg path {
     <!-- お問い合わせ -->
     <section class="section">
       <div class="contact">
-        <h2 class="contact-title">お問い合わせ・ご相談</h2> <!-- 微調整 -->
+        <h2 class="contact-title">お問い合わせ・ご相談</h2>
 
         <div class="contact-grid">
           <div class="contact-card">
@@ -2469,9 +638,9 @@ header .social-icon svg path {
               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
             </svg>
             </div>
-            <h4 class="contact-card-title">お電話でのお問い合わせ</h4> <!-- 微調整 -->
-            <p class="contact-card-text"><a href="tel:0740222063" class="tel-link">0740-22-2063</a><br><span style="font-size: 14px; color: #718096;">受付時間 10:30-19:30</span></p> <!-- 微調整 -->
-            <a href="tel:0740222063" class="button button-outline">今すぐ電話する</a> <!-- 微調整 -->
+            <h4 class="contact-card-title">お電話でのお問い合わせ</h4>
+            <p class="contact-card-text"><a href="tel:0740222063" class="tel-link">0740-22-2063</a><br><span style="font-size: 14px; color: #718096;">受付時間 10:30-19:30</span></p>
+            <a href="tel:0740222063" class="button button-outline">今すぐ電話する</a>
           </div>
 
           <div class="contact-card">
@@ -2480,9 +649,9 @@ header .social-icon svg path {
                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
              </svg>
             </div>
-            <h4 class="contact-card-title">Webフォームから</h4> <!-- 微調整 -->
-            <p class="contact-card-text">ご来場予約やご質問など<br>24時間受付中</p> <!-- 微調整 -->
-            <a href="https://www.toriimusic.co.jp/25682/" class="button button-outline">お問い合わせフォーム</a> <!-- 微調整 -->
+            <h4 class="contact-card-title">Webフォームから</h4>
+            <p class="contact-card-text">ご来場予約やご質問など<br>24時間受付中</p>
+            <a href="https://www.toriimusic.co.jp/25682/" class="button button-outline">お問い合わせフォーム</a>
           </div>
 
           <div class="contact-card">
@@ -2492,9 +661,9 @@ header .social-icon svg path {
                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
              </svg>
             </div>
-            <h4 class="contact-card-title">店舗へのアクセス</h4> <!-- 微調整 -->
-            <p class="contact-card-text">㈱トリイ今津本店への<br>詳しい道順はこちら</p> <!-- 微調整 -->
-            <a href="https://maps.app.goo.gl/QyPEM9FDkYnSwvXY6" target="_blank" class="button button-outline">Google マップで確認</a> <!-- 微調整 -->
+            <h4 class="contact-card-title">店舗へのアクセス</h4>
+            <p class="contact-card-text">㈱トリイ今津本店への<br>詳しい道順はこちら</p>
+            <a href="https://maps.app.goo.gl/QyPEM9FDkYnSwvXY6" target="_blank" class="button button-outline">Google マップで確認</a>
           </div>
         </div>
 
@@ -2517,7 +686,7 @@ header .social-icon svg path {
       <div class="footer-content">
         <div class="footer-left">
           <div class="footer-logo">
-             <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none"> <!-- アイコンサイズ調整 -->
+             <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none">
                 <path d="M19.118 2.882a2.18 2.18 0 0 0-2.18.002l-6.56 3.789V5.5a2.18 2.18 0 0 0-4.36 0v13a2.18 2.18 0 1 0 4.36 0v-1.673l6.56 3.788a2.18 2.18 0 0 0 2.18.001l2.18-1.26a2.18 2.18 0 0 0 1.09-1.89V6.03a2.18 2.18 0 0 0-1.09-1.89l-2.18-1.258zM8.198 18.5a.9.9 0 1 1-1.8 0V5.5a.9.9 0 1 1 1.8 0v13zm9.82-1.258a.9.9 0 0 1-.485.136.9.9 0 0 1-.9-.135l-6.56-3.788V7.939l6.56-3.788a.9.9 0 0 1 .9-.135.9.9 0 0 1 .485.135l2.18 1.26a.9.9 0 0 1 .45.78v8.18a.9.9 0 0 1-.45.78l-2.18 1.259z"/>
              </svg>
             <h2 class="footer-logo-text">ヤマハ特約店 株式会社 トリイ </h2>
@@ -2538,7 +707,7 @@ header .social-icon svg path {
           </div>
         </div>
         <div class="copyright">
-          © 2025 株式会社トリイ. All Rights Reserved. <!-- 微調整 -->
+          © 2025 株式会社トリイ. All Rights Reserved.
         </div>
       </div>
     </div>
@@ -2546,17 +715,14 @@ header .social-icon svg path {
 
   <!-- JavaScript -->
   <script>
-    // タブ切り替え機能 (変更なし)
     document.addEventListener('DOMContentLoaded', function() {
       const tabs = document.querySelectorAll('.tab');
 
       tabs.forEach(tab => {
         tab.addEventListener('click', function() {
-          // アクティブなタブを非アクティブにする
           document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
           document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
 
-          // クリックされたタブをアクティブにする
           this.classList.add('active');
           const tabId = this.getAttribute('data-tab');
           document.getElementById(tabId).classList.add('active');
