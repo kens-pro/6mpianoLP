@@ -1,4 +1,4 @@
-    /* リセットとベーススタイル */
+/* リセットとベーススタイル */
     * {
       margin: 0;
       padding: 0;
@@ -7,45 +7,51 @@
 
     body {
       font-family: 'Noto Sans JP', sans-serif;
-      line-height: 1.7; /* 少し広げる */
-      color: #2d3748; /* 少し濃いグレーに */
-      background: #f7fafc; /* ベース背景を明るいグレーに */
+      line-height: 1.7;
+      color: #2d3748;
+      background: #f7fafc;
       min-height: 100vh;
-      /* ▼▼▼ スティッキーCTAの高さ分、bodyの最下部に余白を追加 ▼▼▼ */
-      padding-bottom: 90px; /* 固定CTAの高さに応じて調整 (スマホ考慮で少し大きめに) */
-      /* ▲▲▲ ここまで追加 ▲▲▲ */
+      padding-bottom: 90px; /* スティッキーCTAの高さ */
     }
 
     img {
       max-width: 100%;
       height: auto;
       display: block;
-      border-radius: 12px; /* 角丸を少し大きく */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 画像にも影 */
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     a {
       text-decoration: none;
-      color: #7c3aed; /* ベースリンク色を少し濃く */
-      transition: all 0.3s ease; /* トランジション対象を all に */
+      color: #7c3aed;
+      transition: all 0.3s ease;
     }
 
     a:hover {
-      color: #5a2a99; /* ホバー色も調整 */
-      text-decoration: none; /* ホバー時の下線を削除 */
+      color: #5a2a99;
       opacity: 0.8;
     }
+    a:focus { /* 基本的なフォーカススタイル */
+        outline: 2px solid #DAA520;
+        outline-offset: 2px;
+        opacity: 1;
+    }
+    a:focus:not(:focus-visible) { /* マウスクリック時のフォーカスアウトラインを隠す */
+        outline: none;
+    }
+
 
     /* 電話リンクのスタイル */
     a.tel-link {
-      color: inherit;
+      color: #c53030; /* 初期色を赤系に */
       text-decoration: none;
       font-weight: 500;
       transition: all 0.3s ease;
-      display: inline-block; /* ホバー効果のため */
+      display: inline-block;
       position: relative;
     }
-    a.tel-link::after { /* ホバー時のアンダーライン風エフェクト */
+    a.tel-link::after {
         content: '';
         position: absolute;
         width: 0;
@@ -53,39 +59,39 @@
         display: block;
         margin-top: 2px;
         right: 0;
-        background: linear-gradient(to right, #DAA520, #B8860B); /* ゴールド系 */
+        background: linear-gradient(to right, #DAA520, #B8860B);
         transition: width .3s ease;
         -webkit-transition: width .3s ease;
     }
-    a.tel-link:hover::after {
+    a.tel-link:hover::after, a.tel-link:focus::after {
         width: 100%;
         left: 0;
-        background: linear-gradient(to right, #DAA520, #B8860B); /* ゴールド系 */
+        background: linear-gradient(to right, #DAA520, #B8860B);
     }
-    a.tel-link:hover {
-       opacity: 1; /* 他のリンクと挙動を合わせる */
-       color: #c53030; /* 赤系に */
+    a.tel-link:hover, a.tel-link:focus {
+       opacity: 1;
+       color: #a02020; /* ホバー/フォーカス時、少し濃い赤に */
     }
 
     /* コンテナとレイアウト */
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px; /* 少し広げる */
+      padding: 0 24px;
       position: relative;
       z-index: 1;
     }
 
     .section {
-      margin-bottom: 100px; /* セクション間隔を広げる */
+      margin-bottom: 100px;
       position: relative;
     }
 
     /* ヘッダー */
     header {
-      background: linear-gradient(135deg, #4a0e34, #1a1a3d); /* 深い紫と紺のグラデーション */
+      background: linear-gradient(135deg, #4a0e34, #1a1a3d);
       color: white;
-      padding: 25px 0; /* 少し広げる */
+      padding: 25px 0;
       position: relative;
       z-index: 10;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -100,12 +106,12 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 15px; /* 少し広げる */
+      gap: 15px;
     }
 
     .logo-icon {
-        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)); /* アイコンに輝き */
-        animation: subtleRotate 10s linear infinite; /* ゆっくり回転 */
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+        animation: subtleRotate 10s linear infinite;
     }
     @keyframes subtleRotate {
       from { transform: rotate(0deg); }
@@ -114,88 +120,97 @@
 
 
     .logo-text {
-      font-size: 32px; /* 少し大きく */
-      font-weight: bold;
-      font-family: 'Playfair Display', serif; /* フォント変更 */
-      letter-spacing: 1px; /* 文字間隔 */
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* テキストシャドウ */
+      font-size: 32px;
+      font-weight: 700; /* bold */
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     .header-right {
       display: flex;
       align-items: center;
-      gap: 20px; /* 少し広げる */
+      gap: 20px;
     }
 
     .social-icons {
       display: flex;
-      gap: 12px; /* 少し広げる */
+      gap: 12px;
     }
 
     .social-icon {
-      width: 44px; /* 少し大きく */
+      width: 44px;
       height: 44px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(255, 255, 255, 0.1); /* 背景少し薄く */
-      border: 1px solid rgba(255, 255, 255, 0.2); /* 枠線追加 */
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 50%;
       transition: all 0.3s ease;
+      color: white; /* SVGの色を継承させるため */
     }
 
-    .social-icon svg { /* アイコンの色を白に */
-        stroke: white;
-        fill: white;
+    .social-icon svg {
+        stroke-width: 2; /* !important不要 */
+    }
+    /* Instagramアイコンは線画なので stroke を currentColor に */
+    .social-icon[aria-label="Instagram"] svg {
+        stroke: currentColor;
+        fill: none;
+    }
+    /* X (Twitter) アイコンは塗りなので fill を currentColor に */
+    .social-icon[aria-label="X (Twitter)"] svg {
+        fill: currentColor;
+        stroke: none;
     }
 
-    .social-icon:hover {
+
+    .social-icon:hover, .social-icon:focus {
       background-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-3px) scale(1.1); /* ホバー効果強化 */
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* ホバー時の影 */
+      transform: translateY(-3px) scale(1.1);
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
       border-color: white;
     }
 
     .contact-button {
-      background: linear-gradient(to right, #DAA520, #B8860B); /* ゴールド系グラデーション */
-      color: #ffffff; /* 文字色を白に */
+      background: linear-gradient(to right, #DAA520, #B8860B);
+      color: #ffffff;
       border: none;
-      padding: 14px 28px; /* 少し大きく */
+      padding: 14px 28px;
       border-radius: 50px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 10px; /* 少し広げる */
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* 影を強く */
+      gap: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
-      text-transform: uppercase; /* 大文字に */
+      text-transform: uppercase;
       letter-spacing: 0.5px;
     }
     .contact-button svg {
-        stroke: white; /* アイコンの色 */
+        stroke: white;
     }
 
-    .contact-button:hover {
-      box-shadow: 0 8px 20px rgba(218, 165, 32, 0.5); /* ゴールド系の影 */
-      transform: translateY(-3px) scale(1.05); /* ホバー効果強化 */
-      background: linear-gradient(to right, #B8860B, #DAA520); /* グラデーション反転 */
+    .contact-button:hover, .contact-button:focus {
+      box-shadow: 0 8px 20px rgba(218, 165, 32, 0.5);
+      transform: translateY(-3px) scale(1.05);
+      background: linear-gradient(to right, #B8860B, #DAA520);
+      color: white; /* 明示 */
     }
 
     /* ヒーローセクション */
-    .hero {
-      text-align: center;
-      margin-bottom: 100px; /* 間隔調整 */
-      position: relative;
+    .hero.section { /* .sectionのデフォルトマージンを上書き */
+        margin-bottom: 0;
     }
-
     .hero-image-container {
       position: relative;
-      border-radius: 0; /* 角丸なし */
+      border-radius: 0;
       overflow: hidden;
-      margin-bottom: -60px; /* カードと重ねる */
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); /* 影を強く */
-      height: 650px; /* 少し高く */
+      /* margin-bottom: -60px; /* 新しいセクション追加のため、これは調整 */
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      height: 650px;
     }
 
     .hero-overlay {
@@ -213,27 +228,28 @@
       height: 100%;
       object-fit: cover;
       border-radius: 0;
-      filter: contrast(110%) brightness(90%); /* 画像コントラスト調整 */
+      filter: contrast(110%) brightness(90%);
+      box-shadow: none; /* 親で指定しているので不要 */
     }
 
     .hero-text {
       position: absolute;
-      top: 55%; /* 少し下げる */
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 2;
       color: white;
       width: 100%;
       padding: 0 20px;
-      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6); /* 影を強く */
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
     }
 
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: 72px; /* さらに大きく */
-      font-weight: 700; /* Bold */
-      margin-bottom: 25px; /* 間隔調整 */
-      letter-spacing: 3px; /* 文字間隔 */
+      font-size: 72px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      letter-spacing: 3px;
       line-height: 1.2;
       color: #FFD700;
       text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75),
@@ -241,33 +257,170 @@
     }
 
     .hero-subtitle {
-      font-size: 32px; /* 少し大きく */
+      font-size: 32px;
       font-weight: 300;
-      margin-bottom: 40px; /* 間隔調整 */
-      font-style: italic; /* イタリックに */
+      margin-bottom: 40px;
+      font-style: italic;
       opacity: 0.9;
     }
 
     .hero-date {
-      font-size: 26px; /* 少し大きく */
+      font-size: 26px;
       font-weight: 500;
-      background: rgba(255, 255, 255, 0.15); /* 背景少し透明度調整 */
-      padding: 15px 40px; /* 少し大きく */
+      background: rgba(255, 255, 255, 0.15);
+      padding: 15px 40px;
       border-radius: 50px;
       display: inline-block;
-      backdrop-filter: blur(8px); /* ブラー強く */
-      border: 1px solid rgba(255, 255, 255, 0.3); /* 枠線追加 */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 影追加 */
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
+    /* 在庫状況お知らせ & CTAセクション */
+    .stock-info-cta-section {
+        background: linear-gradient(to bottom, #fffaf0, #fff8e1); /* 淡いクリーム系のグラデーション */
+        padding: 50px 0;
+        text-align: center;
+        border-bottom: 2px solid #ffe082; /* ゴールド系のアクセントボーダー */
+        margin-bottom: 60px; /* 次のカードセクションとのマージン */
+    }
+    .stock-info-cta-section .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .stock-info-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .stock-info-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 30px;
+        font-weight: 700;
+        color: #8c5a0c; /* 濃いめのゴールド/ブラウン */
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+    }
+    .stock-info-title::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 3px;
+        background: #DAA520;
+        border-radius: 1.5px;
+    }
+
+    .stock-info-details {
+        font-size: 18px;
+        color: #4d4d4d; /* 少し濃いグレー */
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .stock-highlight {
+        font-weight: 700;
+        color: #c53030; /* 強調の赤 */
+        font-size: 1.1em;
+    }
+
+    .stock-info-link a {
+        font-size: 17px;
+        font-weight: 700;
+        color: #7c3aed; /* ベースリンク色 */
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    }
+    .stock-info-link a:hover, .stock-info-link a:focus {
+        color: #5a2a99; /* ホバー色 */
+        text-decoration-color: #5a2a99;
+        opacity: 1; /* ホバー時のopacity調整 */
+    }
+
+
+    .extra-cta-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .cta-button {
+        padding: 18px 30px;
+        font-size: 1.1em; /* 少し大きめ */
+        font-weight: 700; /* bold */
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        min-width: 280px; /* ボタン幅の最小値を設定 */
+    }
+    .cta-button svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .cta-button-phone {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b); /* オレンジ系グラデーション */
+        color: white;
+    }
+    .cta-button-phone:hover, .cta-button-phone:focus {
+        background: linear-gradient(135deg, #e6684c, #e59f66);
+        box-shadow: 0 8px 20px rgba(255, 126, 95, 0.4);
+        transform: translateY(-3px) scale(1.03);
+        color: white; /* 明示 */
+    }
+
+    .cta-button-reserve {
+        background: linear-gradient(135deg, #667eea, #764ba2); /* 青紫系グラデーション */
+        color: white;
+    }
+    .cta-button-reserve:hover, .cta-button-reserve:focus {
+        background: linear-gradient(135deg, #5269d1, #603a87);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        transform: translateY(-3px) scale(1.03);
+        color: white; /* 明示 */
+    }
+
+    .cta-button-stock {
+        background: linear-gradient(135deg, #DAA520, #B8860B); /* ゴールド系 */
+        color: white;
+    }
+    .cta-button-stock:hover, .cta-button-stock:focus {
+        background: linear-gradient(135deg, #B8860B, #DAA520);
+        box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
+        transform: translateY(-3px) scale(1.03);
+        color: white; /* 明示 */
+    }
+
+    /* ヒーロー下のカード */
+    .hero-card-section {
+        margin-top: -80px; /* ヒーロー画像と重ねるための調整 */
+        position: relative;
+        z-index: 3;
+    }
     .card {
-      background: #ffffff; /* 背景白 */
-      border-radius: 20px; /* 角丸大きく */
-      padding: 50px; /* パディング大きく */
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12); /* 影を調整 */
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
       position: relative;
       overflow: hidden;
-      z-index: 3; /* ヒーロー画像の上に */
+      /* z-index: 3; /* .hero-card-sectionで管理 */
     }
 
     .card::before {
@@ -276,13 +429,13 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 8px; /* 太く */
-      background: linear-gradient(to right, #DAA520, #B8860B, #DAA520); /* ゴールド系 */
+      height: 8px;
+      background: linear-gradient(to right, #DAA520, #B8860B, #DAA520);
     }
 
     .card-title {
       font-size: 32px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       color: #4a0e34;
       margin-bottom: 15px;
       position: relative;
@@ -305,9 +458,9 @@
     }
 
     .card-text {
-      color: #4a5568; /* 文字色調整 */
-      margin-bottom: 40px; /* 間隔調整 */
-      font-size: 17px; /* 少し大きく */
+      color: #4a5568;
+      margin-bottom: 40px;
+      font-size: 17px;
       line-height: 1.8; text-align: left;
     }
 
@@ -315,20 +468,20 @@
     .features {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 40px; /* 間隔広げる */
-      margin-bottom: 50px; /* 間隔調整 */
+      gap: 40px;
+      margin-bottom: 50px;
     }
 
     .feature-card {
       background: white;
       border-radius: 16px;
-      padding: 35px; /* 少し大きく */
+      padding: 35px;
       text-align: center;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* トランジション調整 */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); /* 影調整 */
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
       position: relative;
       overflow: hidden;
-      border: 1px solid #e2e8f0; /* 枠線追加 */
+      border: 1px solid #e2e8f0;
     }
 
     .feature-card::before {
@@ -338,20 +491,20 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(218, 165, 32, 0.1) 0%, rgba(255, 255, 255, 0) 70%); /* ゴールド系の光彩 */
+      background: radial-gradient(circle, rgba(218, 165, 32, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
       transition: opacity 0.5s ease;
       opacity: 0;
       z-index: 0;
     }
 
-    .feature-card:hover::before {
+    .feature-card:hover::before, .feature-card:focus-within::before { /* focus-within でカード内の要素にフォーカスが当たった場合も適用 */
         opacity: 1;
     }
 
-    .feature-card:hover {
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); /* ホバー時の影 */
-      transform: translateY(-10px) scale(1.03); /* ホバー効果強化 */
-      border-color: #DAA520; /* 枠線色変更 */
+    .feature-card:hover, .feature-card:focus-within {
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      transform: translateY(-10px) scale(1.03);
+      border-color: #DAA520;
     }
     .feature-icon, .feature-title, .feature-description {
         position: relative;
@@ -369,7 +522,7 @@
       transition: all 0.3s ease;
       box-shadow: 0 5px 15px rgba(218, 165, 32, 0.3);
     }
-    .feature-card:hover .feature-icon {
+    .feature-card:hover .feature-icon, .feature-card:focus-within .feature-icon {
         transform: rotateY(360deg);
         background: linear-gradient(135deg, #DAA520, #B8860B);
         color: white;
@@ -381,13 +534,13 @@
     }
 
     .feature-title {
-      font-weight: bold;
+      font-weight: 700; /* bold */
       color: #8b5cf6;
       margin-bottom: 15px;
       font-size: 20px;
       font-family: 'Playfair Display', serif;
     }
-    .feature-card:hover .feature-title {
+    .feature-card:hover .feature-title, .feature-card:focus-within .feature-title {
         color: #4a0e34;
     }
 
@@ -406,7 +559,7 @@
     .button {
       padding: 18px 36px;
       border-radius: 50px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -417,6 +570,14 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
+    /* ボタンのフォーカススタイル */
+    .button:focus {
+        outline: 2px solid #DAA520;
+        outline-offset: 3px;
+    }
+    .button:focus:not(:focus-visible) {
+        outline: none;
+    }
 
     .button-primary {
       background: linear-gradient(to right, #6d28d9, #4f46e5);
@@ -424,7 +585,7 @@
       box-shadow: 0 8px 25px rgba(109, 40, 217, 0.4);
     }
 
-    .button-primary:hover {
+    .button-primary:hover, .button-primary:focus {
       box-shadow: 0 12px 30px rgba(109, 40, 217, 0.6);
       transform: translateY(-4px) scale(1.05);
       background: linear-gradient(to right, #4f46e5, #6d28d9);
@@ -437,10 +598,10 @@
       color: #7c3aed;
       border: 2px solid #7c3aed;
       box-shadow: none;
-      padding: 16px 34px;
+      padding: 16px 34px; /* border分考慮 */
     }
 
-    .button-outline:hover {
+    .button-outline:hover, .button-outline:focus {
       background: #7c3aed;
       color: white;
       box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
@@ -451,10 +612,11 @@
        stroke: #7c3aed;
        transition: stroke 0.3s ease;
     }
-    .button-outline:hover svg {
+    .button-outline:hover svg, .button-outline:focus svg {
        stroke: white;
     }
 
+    /* イベント詳細 */
     .event-details {
       background: linear-gradient(135deg, #1a1a3d, #3a0d2b);
       border-radius: 20px;
@@ -478,7 +640,7 @@
 
     .event-title {
       font-size: 40px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       text-align: center;
       margin-bottom: 60px;
       color: #fdeab5;
@@ -522,7 +684,7 @@
       color: #e2e8f0;
     }
 
-    .event-card:hover {
+    .event-card:hover, .event-card:focus-within {
       transform: translateY(-8px) scale(1.02);
       background: rgba(255, 255, 255, 0.1);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
@@ -548,7 +710,7 @@
       background: linear-gradient(135deg, #ec4899, #d946ef);
       box-shadow: 0 8px 16px rgba(217, 70, 239, 0.3);
     }
-    .event-card:hover .icon-circle {
+    .event-card:hover .icon-circle, .event-card:focus-within .icon-circle {
         transform: scale(1.1) rotate(15deg);
     }
     .icon-circle svg {
@@ -557,7 +719,7 @@
     }
 
     .event-card-title {
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-size: 22px;
       margin-bottom: 15px;
     }
@@ -585,14 +747,14 @@
       transition: all 0.3s ease;
     }
 
-    .access-card:hover {
+    .access-card:hover, .access-card:focus-within {
       transform: translateY(-5px);
       background: rgba(255, 255, 255, 0.1);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
     }
 
     .access-title {
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-size: 24px;
       margin-bottom: 25px;
       color: #f9a8d4;
@@ -638,7 +800,7 @@
       box-shadow: 0 6px 12px rgba(14, 165, 233, 0.3);
       transition: all 0.3s ease;
     }
-    .access-item:hover .access-icon {
+    .access-item:hover .access-icon, .access-item:focus-within .access-icon {
         transform: scale(1.15);
     }
     .access-icon svg {
@@ -646,6 +808,7 @@
         width: 20px; height: 20px;
     }
 
+    /* 商品ラインナップ */
     .lineup-header {
       text-align: center;
       margin-bottom: 50px;
@@ -657,7 +820,7 @@
       color: white;
       padding: 10px 25px;
       border-radius: 50px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       margin-bottom: 20px;
       font-size: 18px;
       box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
@@ -667,7 +830,7 @@
 
     .lineup-title {
       font-size: 40px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       color: #1a202c;
       margin-bottom: 25px;
       font-family: 'Playfair Display', serif;
@@ -697,12 +860,17 @@
       padding: 25px;
       background: transparent;
       cursor: pointer;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       transition: all 0.3s ease;
       position: relative;
       color: #4a5568;
       font-size: 17px;
       border-bottom: 3px solid transparent;
+    }
+    .tab:focus { /* タブのフォーカススタイル */
+        outline: none; /* デフォルトのアウトラインを消す */
+        background-color: rgba(218, 165, 32, 0.08);
+        border-bottom-color: #DAA520; /* アクティブ時と同じか、少し異なる色で */
     }
 
     .tab.active {
@@ -710,7 +878,7 @@
       background: linear-gradient(to bottom, rgba(218, 165, 32, 0.05), rgba(218, 165, 32, 0));
       border-bottom: 3px solid #DAA520;
     }
-    .tab.active::after { display: none; }
+    .tab.active::after { display: none; } /* 通常のリンク用ホバーエフェクトを無効化 */
 
 
     .tab-content {
@@ -728,7 +896,7 @@
 
     .piano-type {
       font-size: 26px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       color: #c53030;
       margin-bottom: 25px;
       margin-top: 40px;
@@ -770,7 +938,7 @@
       color: #2d3748;
       text-align: left;
       padding: 18px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-size: 15px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -785,15 +953,17 @@
     }
 
     tr:hover {
-      background-color: #fefcbf;
+      background-color: #fefcbf; /* 淡い黄色 */
     }
-    td a {
+    /* テーブル内リンク共通スタイル */
+    .table-container td a {
         color: #7c3aed;
         font-weight: 500;
         position: relative;
         display: inline-block;
+        text-decoration: none; /* 下線を消す */
     }
-    td a::after {
+    .table-container td a::after {
         content: '';
         position: absolute;
         width: 0;
@@ -804,18 +974,18 @@
         background: #7c3aed;
         transition: width .2s ease;
     }
-    td a:hover::after {
+    .table-container td a:hover::after, .table-container td a:focus::after {
         width: 100%;
         left: 0;
     }
-    td a:hover {
-        opacity: 1;
+    .table-container td a:hover, .table-container td a:focus {
+        opacity: 1; /* ホバー/フォーカス時のopacity調整 */
         color: #5a2a99;
     }
 
     .sold {
       color: #c53030;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-style: italic;
     }
 
@@ -840,12 +1010,13 @@
       display: inline-block;
       margin-bottom: 25px;
       border-radius: 8px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       color: #b7791f;
       box-shadow: 0 5px 15px rgba(250, 240, 137, 0.5);
       border: 1px solid #f6e05e;
     }
 
+    /* 展示場情報 */
     .showroom {
       background: white;
       border-radius: 20px;
@@ -881,7 +1052,7 @@
 
     .showroom-title {
       font-size: 36px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       margin-bottom: 20px;
       font-family: 'Playfair Display', serif;
     }
@@ -929,7 +1100,7 @@
     }
     .concierge-title {
       font-size: 28px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       color: #5a2a99;
       margin-bottom: 25px;
       position: relative;
@@ -940,15 +1111,16 @@
         background: linear-gradient(to right, #DAA520, #B8860B);
         box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
     }
-     .concierge-card .button-primary:hover {
+     .concierge-card .button-primary:hover, .concierge-card .button-primary:focus {
         box-shadow: 0 10px 25px rgba(218, 165, 32, 0.6);
         background: linear-gradient(to right, #B8860B, #DAA520);
      }
 
+    /* ピアノご成約特典セクション */
     .premium-section {
       background: linear-gradient(to bottom, #f0e6ff, #dcdcdc);
       padding: 80px 0;
-      margin-bottom: 100px;
+      /* margin-bottom: 100px; /* .containerで囲まれているため、個別のmarginは不要かも */
       border-radius: 20px;
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
       overflow: hidden;
@@ -970,12 +1142,13 @@
     .section-title {
       text-align: center;
       margin-bottom: 50px;
-      position: relative;
+      position: relative; /* z-indexのため */
+      z-index: 1;
     }
 
     .section-title h2 {
       font-size: 36px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       margin-bottom: 20px;
       display: inline-block;
       position: relative;
@@ -1001,13 +1174,15 @@
       color: #4a5568;
       font-size: 18px;
       max-width: 800px;
-      margin-left: 0;
-      margin-right: 0;
-      text-align: left;
+      margin-left: auto; /* 中央寄せ */
+      margin-right: auto; /* 中央寄せ */
+      /* text-align: left; /* text-align:centerが親にあるので上書き */
     }
 
     .used-piano-premium {
       margin-top: 60px;
+      position: relative; /* z-indexのため */
+      z-index: 1;
     }
 
     .used-piano-header {
@@ -1025,7 +1200,7 @@
     .used-piano-header h3 {
       margin: 0;
       font-size: 26px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-family: 'Playfair Display', serif;
     }
 
@@ -1040,7 +1215,7 @@
     .choose-text {
       text-align: center;
       margin: 30px 0;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-size: 20px;
       color: #4a0e34;
       background: rgba(255, 255, 255, 0.5);
@@ -1067,7 +1242,7 @@
       border-top: 5px solid;
       position: relative;
     }
-    .premium-card:hover {
+    .premium-card:hover, .premium-card:focus-within {
         transform: translateY(-8px) scale(1.03);
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     }
@@ -1078,7 +1253,7 @@
 
 
     .premium-card-label {
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-size: 24px;
       margin-bottom: 15px;
       font-family: 'Playfair Display', serif;
@@ -1099,6 +1274,8 @@
 
     .piano-premium {
       margin-bottom: 60px;
+      position: relative; /* z-indexのため */
+      z-index: 1;
     }
 
     .piano-premium-header {
@@ -1116,7 +1293,7 @@
     .piano-premium-header h3 {
       margin: 0;
       font-size: 26px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-family: 'Playfair Display', serif;
       letter-spacing: 0.5px;
     }
@@ -1148,7 +1325,7 @@
       border: 1px solid #e2e8f0;
     }
 
-    .premium-item:hover {
+    .premium-item:hover, .premium-item:focus-within {
       transform: translateY(-6px);
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
       border-color: #cbd5e0;
@@ -1166,7 +1343,7 @@
       color: #4a5568;
       transition: all 0.3s ease;
     }
-    .premium-item:hover .premium-item-icon {
+    .premium-item:hover .premium-item-icon, .premium-item:focus-within .premium-item-icon {
         background: #4a5568;
         color: white;
         transform: rotate(10deg);
@@ -1182,6 +1359,7 @@
       font-weight: 500;
     }
 
+    /* エレクトーン展示 */
     #electone-lineup {
       background: linear-gradient(135deg, #fdf4ff, #eff6ff);
       padding: 100px 0;
@@ -1189,7 +1367,7 @@
       overflow: hidden;
       border-radius: 20px;
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-      margin-bottom: 100px;
+      /* margin-bottom: 100px; */
     }
 
     #electone-lineup::before {
@@ -1209,16 +1387,11 @@
       z-index: 1;
     }
 
-    #electone-lineup .lineup-title {
-      font-size: 40px;
-      font-weight: bold;
+    #electone-lineup .lineup-title { /* .lineup-title の基本スタイルを継承しつつ調整 */
       color: #5a2a99;
       margin-bottom: 40px;
-      position: relative;
-      display: inline-block;
-      font-family: 'Playfair Display', serif;
+      width: 100%; /* text-align:center を効かせるため */
       text-align: center;
-      width: 100%;
     }
 
     #electone-lineup .lineup-title::after {
@@ -1234,15 +1407,15 @@
       box-shadow: 0 0 8px rgba(124, 58, 237, 0.5);
     }
 
-    #electone-lineup p {
+    #electone-lineup > .container > p { /* 直下のpタグのみに適用 */
       line-height: 1.8;
       margin-bottom: 40px;
       font-size: 17px;
       color: #4a5568;
-      text-align: left;
+      /* text-align: left; /* .container 内で中央寄せになるのを防ぐ */
       max-width: 700px;
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: auto; /* 中央寄せ */
+      margin-right: auto; /* 中央寄せ */
     }
 
     #electone-lineup strong {
@@ -1261,7 +1434,7 @@
     #electone-lineup th {
       background: linear-gradient(to bottom, #f3e8ff, #e9d5ff);
       color: #581c87;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       padding: 18px;
       text-align: left;
       font-size: 15px;
@@ -1293,6 +1466,7 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
+    /* エレクトーンご成約プレミアム */
     #electone-gift {
       background: linear-gradient(to bottom, #eff6ff, #dbeafe);
       padding: 100px 0;
@@ -1300,7 +1474,7 @@
       overflow: hidden;
       border-radius: 20px;
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-      margin-bottom: 100px;
+      /* margin-bottom: 100px; */
     }
 
     #electone-gift::before {
@@ -1330,21 +1504,16 @@
       width: 100%;
     }
 
-    #electone-gift img:hover {
+    #electone-gift img:hover, #electone-gift img:focus {
       transform: translateY(-8px) scale(1.05);
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
     }
 
-    #electone-gift .lineup-title {
-      font-size: 40px;
-      font-weight: bold;
+    #electone-gift .lineup-title { /* .lineup-title の基本スタイルを継承しつつ調整 */
       color: #0369a1;
       margin-bottom: 40px;
-      position: relative;
-      display: inline-block;
-      font-family: 'Playfair Display', serif;
+      width: 100%; /* text-align:center を効かせるため */
       text-align: center;
-      width: 100%;
     }
 
     #electone-gift .lineup-title::after {
@@ -1360,15 +1529,15 @@
       box-shadow: 0 0 8px rgba(14, 165, 233, 0.5);
     }
 
-   #electone-gift p {
+   #electone-gift > .container > p { /* 直下のpタグのみに適用 */
       line-height: 1.8;
       margin-bottom: 40px;
       font-size: 17px;
       color: #374151;
-      text-align: left;
+      /* text-align: left; /* .container 内で中央寄せになるのを防ぐ */
       max-width: 700px;
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: auto; /* 中央寄せ */
+      margin-right: auto; /* 中央寄せ */
     }
 
     #electone-gift ul {
@@ -1378,7 +1547,7 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       margin-bottom: 50px;
       list-style: none;
-      max-width: 500px;
+      max-width: 500px; /* HTML側で指定済みだが念のため */
       margin-left: auto;
       margin-right: auto;
       border: 1px solid rgba(255, 255, 255, 0.8);
@@ -1404,6 +1573,7 @@
       font-size: 20px;
     }
 
+    /* お問い合わせ */
     .contact {
       background: white;
       border-radius: 20px;
@@ -1427,7 +1597,7 @@
 
     .contact-title {
       font-size: 40px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       color: #1a202c;
       margin-bottom: 50px;
       position: relative;
@@ -1464,7 +1634,7 @@
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
     }
 
-    .contact-card:hover {
+    .contact-card:hover, .contact-card:focus-within {
       transform: translateY(-8px) scale(1.03);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
       border-color: #cbd5e0;
@@ -1482,7 +1652,7 @@
     .contact-card:nth-child(2) .contact-icon { background: linear-gradient(135deg, #a78bfa, #8b5cf6); color: #4c1d95; }
     .contact-card:nth-child(3) .contact-icon { background: linear-gradient(135deg, #7dd3fc, #38bdf8); color: #075985; }
 
-    .contact-card:hover .contact-icon {
+    .contact-card:hover .contact-icon, .contact-card:focus-within .contact-icon {
         transform: rotate(-15deg) scale(1.1);
     }
     .contact-icon svg {
@@ -1491,7 +1661,7 @@
     }
 
     .contact-card-title {
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-size: 22px;
       margin-bottom: 15px;
       color: #1a202c;
@@ -1507,30 +1677,31 @@
         padding: 12px 28px;
     }
     .contact-card:nth-child(1) .button-outline { color: #f472b6; border-color: #f472b6; }
-    .contact-card:nth-child(1) .button-outline:hover { background: #f472b6; color: white; box-shadow-color: rgba(244, 114, 182, 0.3); }
+    .contact-card:nth-child(1) .button-outline:hover, .contact-card:nth-child(1) .button-outline:focus { background: #f472b6; color: white; box-shadow-color: rgba(244, 114, 182, 0.3); }
     .contact-card:nth-child(1) .button-outline svg { stroke: #f472b6; }
-    .contact-card:nth-child(1) .button-outline:hover svg { stroke: white; }
+    .contact-card:nth-child(1) .button-outline:hover svg, .contact-card:nth-child(1) .button-outline:focus svg { stroke: white; }
 
     .contact-card:nth-child(2) .button-outline { color: #8b5cf6; border-color: #8b5cf6; }
-    .contact-card:nth-child(2) .button-outline:hover { background: #8b5cf6; color: white; box-shadow-color: rgba(139, 92, 246, 0.3); }
+    .contact-card:nth-child(2) .button-outline:hover, .contact-card:nth-child(2) .button-outline:focus { background: #8b5cf6; color: white; box-shadow-color: rgba(139, 92, 246, 0.3); }
     .contact-card:nth-child(2) .button-outline svg { stroke: #8b5cf6; }
-    .contact-card:nth-child(2) .button-outline:hover svg { stroke: white; }
+    .contact-card:nth-child(2) .button-outline:hover svg, .contact-card:nth-child(2) .button-outline:focus svg { stroke: white; }
 
     .contact-card:nth-child(3) .button-outline { color: #38bdf8; border-color: #38bdf8; }
-    .contact-card:nth-child(3) .button-outline:hover { background: #38bdf8; color: white; box-shadow-color: rgba(56, 189, 248, 0.3); }
+    .contact-card:nth-child(3) .button-outline:hover, .contact-card:nth-child(3) .button-outline:focus { background: #38bdf8; color: white; box-shadow-color: rgba(56, 189, 248, 0.3); }
     .contact-card:nth-child(3) .button-outline svg { stroke: #38bdf8; }
-    .contact-card:nth-child(3) .button-outline:hover svg { stroke: white; }
+    .contact-card:nth-child(3) .button-outline:hover svg, .contact-card:nth-child(3) .button-outline:focus svg { stroke: white; }
 
     .contact .button-primary {
         background: linear-gradient(to right, #DAA520, #B8860B);
         box-shadow: 0 8px 25px rgba(218, 165, 32, 0.4);
         margin-top: 10px;
     }
-    .contact .button-primary:hover {
+    .contact .button-primary:hover, .contact .button-primary:focus {
         box-shadow: 0 12px 30px rgba(218, 165, 32, 0.6);
         background: linear-gradient(to right, #B8860B, #DAA520);
     }
 
+    /* フッター */
     footer {
       background: linear-gradient(135deg, #1f2937, #111827);
       color: #d1d5db;
@@ -1574,7 +1745,7 @@
 
     .footer-logo-text {
       font-size: 28px;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-family: 'Playfair Display', serif;
       color: #f3f4f6;
       letter-spacing: 0.5px;
@@ -1595,27 +1766,32 @@
       border-radius: 50%;
       transition: all 0.3s ease;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #9ca3af; /* SVGの色を継承 */
     }
-    .footer-social-icon svg {
-        fill: #9ca3af;
-        transition: fill 0.3s ease;
+    /* フッターソーシャルアイコンのSVGもcurrentColorベースに */
+    .footer-social-icon[aria-label="Instagram"] svg {
+        stroke: currentColor;
+        fill: none;
+    }
+    .footer-social-icon[aria-label="X (Twitter)"] svg {
+        fill: currentColor;
+        stroke: none;
     }
 
-    .footer-social-icon:hover {
+    .footer-social-icon:hover, .footer-social-icon:focus {
       background-color: rgba(218, 165, 32, 0.8);
       transform: translateY(-4px) scale(1.1);
       border-color: #DAA520;
       box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4);
+      color: white; /* ホバー/フォーカス時の色 */
     }
-     .footer-social-icon:hover svg {
-        fill: white;
-     }
 
     .copyright {
       font-size: 15px;
       color: #9ca3af;
     }
 
+    /* スティッキーCTA */
     .sticky-cta-container {
       position: fixed;
       bottom: 0;
@@ -1638,7 +1814,7 @@
       padding: 14px 10px;
       color: white;
       text-align: center;
-      font-weight: bold;
+      font-weight: 700; /* bold */
       font-size: 1em;
       border-radius: 8px;
       text-decoration: none;
@@ -1651,6 +1827,14 @@
       min-height: 50px;
       border: none;
     }
+    /* スティッキーCTAボタンのフォーカス */
+    .sticky-cta-button:focus {
+        outline: 2px solid white;
+        outline-offset: -3px; /* 内側にオフセット */
+    }
+    .sticky-cta-button:focus:not(:focus-visible) {
+        outline: none;
+    }
 
     .sticky-cta-button svg {
       width: 20px;
@@ -1661,7 +1845,7 @@
     .sticky-cta-phone {
       background: linear-gradient(to right, #DAA520, #B8860B);
     }
-    .sticky-cta-phone:hover {
+    .sticky-cta-phone:hover, .sticky-cta-phone:focus {
       background: linear-gradient(to right, #B8860B, #DAA520);
       box-shadow: 0 4px 10px rgba(218, 165, 32, 0.4);
       transform: translateY(-2px);
@@ -1670,16 +1854,21 @@
     .sticky-cta-contact {
       background: linear-gradient(to right, #6d28d9, #4f46e5);
     }
-    .sticky-cta-contact:hover {
+    .sticky-cta-contact:hover, .sticky-cta-contact:focus {
       background: linear-gradient(to right, #4f46e5, #6d28d9);
       box-shadow: 0 4px 10px rgba(109, 40, 217, 0.4);
       transform: translateY(-2px);
     }
 
+    /* レスポンシブ */
     @media (max-width: 1024px) {
       .hero-title { font-size: 56px; }
       .hero-subtitle { font-size: 26px; }
       .hero-date { font-size: 22px; }
+      .stock-info-title { font-size: 28px; }
+      .stock-info-details { font-size: 17px; }
+      .cta-button { min-width: 260px; padding: 16px 25px; font-size: 1em; }
+      .hero-card-section { margin-top: -60px; }
       .features { grid-template-columns: 1fr; gap: 30px;}
       .event-grid { grid-template-columns: 1fr; gap: 30px; }
       .access-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -1691,10 +1880,17 @@
     @media (max-width: 768px) {
       body { line-height: 1.6; padding-bottom: 80px; }
       .logo-text { font-size: 26px; }
-      .hero-image-container { height: 550px; margin-bottom: -40px; }
+      .hero-image-container { height: 550px; }
       .hero-title { font-size: 42px; letter-spacing: 2px; }
       .hero-subtitle { font-size: 22px; }
       .hero-date { font-size: 18px; padding: 12px 30px; }
+      .stock-info-cta-section { padding: 40px 0; margin-bottom: 50px;}
+      .stock-info-title { font-size: 26px; }
+      .stock-info-details { font-size: 16px; }
+      .stock-info-link a { font-size: 16px; }
+      .extra-cta-container { flex-direction: column; align-items: center; gap: 15px;}
+      .cta-button { min-width: 90%; width: 100%; max-width: 350px; padding: 15px 20px;}
+      .hero-card-section { margin-top: -40px; }
       .card { padding: 40px 30px; }
       .card-title { font-size: 28px; }
       .features { gap: 25px; margin-bottom: 40px;}
@@ -1715,23 +1911,25 @@
       .showroom-content { padding: 40px 30px; gap: 30px;}
       .concierge-card { padding: 35px; }
       .concierge-title { font-size: 24px; }
-      .premium-section { padding: 60px 0; }
+      .premium-section { padding: 60px 0; } /* .containerで囲むのでpadding-left/rightは不要 */
       .section-title h2 { font-size: 30px; }
+      .section-title p { text-align: center; /* 768px以下では中央寄せに */ }
       .used-piano-header, .piano-premium-header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 15px 20px; }
       .used-piano-header h3, .piano-premium-header h3 { font-size: 22px; }
       .choose-text { font-size: 18px; margin: 25px 0; }
       .premium-cards, .premium-items { grid-template-columns: 1fr; gap: 20px; }
       #electone-lineup, #electone-gift { padding: 80px 0; }
       #electone-lineup .lineup-title, #electone-gift .lineup-title { font-size: 32px; }
+      #electone-lineup > .container > p, #electone-gift > .container > p { text-align: center; }
       #electone-lineup table { display: block; width: 100%; }
       #electone-lineup thead { display: none; }
       #electone-lineup tbody { display: block; width: 100%; }
       #electone-lineup tr { display: block; margin-bottom: 1.5rem; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
       #electone-lineup td { display: block; text-align: left; padding: 0.75rem 0 0.75rem 100px; border: none; position: relative; font-size: 15px;}
-      #electone-lineup td:before { content: attr(data-label); font-weight: bold; color: #581c87; position: absolute; left: 1rem; top: 0.75rem; width: 80px; text-align: left; font-size: 14px;}
+      #electone-lineup td:before { content: attr(data-label); font-weight: 700; /* bold */ color: #581c87; position: absolute; left: 1rem; top: 0.75rem; width: 80px; text-align: left; font-size: 14px;}
       #electone-lineup td img { margin: 0; max-height: 90px; }
-      #electone-lineup td[data-label="画像"] { padding-left: 1rem; }
-      #electone-lineup td[data-label="画像"]::before { display: none; }
+      #electone-lineup td[data-label="製品イメージ"] { padding-left: 1rem; } /* 画像のtdはラベル分padding不要 */
+      #electone-lineup td[data-label="製品イメージ"]::before { display: none; }
       #electone-gift ul { padding: 30px 40px; }
       #electone-gift li { font-size: 16px; padding-left: 25px;}
       #electone-gift li::before { left: 0; }
@@ -1768,6 +1966,13 @@
       .hero-title { font-size: 34px; letter-spacing: 1px; }
       .hero-subtitle { font-size: 18px; }
       .hero-date { font-size: 16px; padding: 10px 25px; }
+      .stock-info-cta-section { padding: 30px 0; margin-bottom: 40px;}
+      .stock-info-title { font-size: 22px; }
+      .stock-info-details { font-size: 15px; }
+      .stock-info-link a { font-size: 15px; }
+      .cta-button { font-size: 1em; padding: 14px 15px; gap: 10px;}
+      .cta-button svg { width: 20px; height: 20px;}
+      .hero-card-section { margin-top: -30px; }
       .card { padding: 30px 20px; border-radius: 16px; }
       .card-title { font-size: 24px; }
       .card-text { font-size: 16px; }
@@ -1847,14 +2052,4 @@
         width: 16px;
         height: 16px;
       }
-    }
-
-    header .social-icon svg * {
-        stroke: white !important;
-        fill: none !important;
-        stroke-width: 2px !important;
-    }
-
-    header .social-icon svg path {
-         fill: none !important;
     }
