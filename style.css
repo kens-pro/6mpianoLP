@@ -1,3 +1,5 @@
+---
+
 /* リセットとベーススタイル */
     * {
       margin: 0;
@@ -2094,4 +2096,178 @@
   background: linear-gradient(135deg, #e6684c, #e59f66);
   box-shadow: 0 10px 24px rgba(255, 126, 95, 0.5);
   transform: translateY(-2px);
+}
+.featured-piano-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.piano-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+.piano-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+.piano-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.piano-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2d3748;
+}
+.piano-card .price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c53030;
+  margin-bottom: 10px;
+}
+.piano-card .features {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .featured-piano-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.piano-card-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.piano-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.piano-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.piano-info {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.piano-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.piano-info p {
+  font-size: 15px;
+  color: #4a5568;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.piano-info .price span {
+  color: #c53030;
+  font-weight: bold;
+  font-size: 18px;
+}
+.piano-card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap; /* 横並びを強制 */
+  margin-bottom: 60px;
+}
+
+.piano-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 33.33%; /* 横に3つ並べる */
+  max-width: none; /* 340px の制限を解除 */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 900px) {
+  .piano-card-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .piano-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.piano-card .btn {
+  text-align: center;  /* これでボタン内テキストが中央に */
+  justify-content: center; /* flex使用時用 */
+}
+.piano-description {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 0 12px;
+}
+.piano-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* 子要素を中央揃え */
+  text-align: center;
+}
+
+.piano-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+.piano-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中央揃え */
+  text-align: center;
+  padding: 20px;
+}
+
+.piano-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.piano-info a.button {
+  margin-top: 1em;
+  display: inline-block;
+  text-align: center;
 }
