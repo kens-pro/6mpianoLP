@@ -2271,16 +2271,46 @@
   display: inline-block;
   text-align: center;
 }
-/* ===== Sticky CTA (mobile) ===== */
+/* ========== Sticky CTA – refined ========== */
 @media (max-width: 768px){
   .sticky-cta{
     position:fixed; bottom:0; left:0; width:100%;
-    display:flex; z-index:9999; box-shadow:0 -4px 10px rgba(0,0,0,.15);
+    display:flex; gap:0.5rem;                /* ボタン間に余白 */
+    padding:0.4rem 0.5rem;                   /* バー内パディング */
+    backdrop-filter:blur(10px) saturate(180%);
+    background:rgba(255,255,255,0.55);       /* うっすら透けるガラス風 */
+    border-top:1px solid rgba(255,255,255,0.35);
+    z-index:2147483647;
   }
+
   .sticky-cta a{
-    flex:1; text-align:center; padding:14px 0;
-    font-size:1.05rem; font-weight:700; color:#fff;
+    flex:1;
+    display:flex; align-items:center; justify-content:center; gap:0.4rem;
+    font-size:1.05rem; font-weight:700; color:#fff; text-decoration:none;
+    padding:0.7rem 0;
+    border-radius:9999px;                    /* pill 形状 */
+    box-shadow:0 2px 6px rgba(0,0,0,.18);
+    transition:transform .15s ease, box-shadow .15s ease, opacity .15s;
   }
-  .cta-call   { background:#e53e3e; }  /* 赤：電話 */
-  .cta-reserve{ background:#3182ce; }  /* 青：予約 */
+  .sticky-cta a svg{ width:20px; height:20px; }
+
+  /* 個別トーン */
+  .cta-call{
+    background:linear-gradient(135deg,#ff8585 0%,#e53e3e 100%);
+  }
+  .cta-reserve{
+    background:linear-gradient(135deg,#5aa9ff 0%,#3182ce 100%);
+  }
+
+  /* Hover / active */
+  .sticky-cta a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,.28);
+    opacity:.95;
+  }
+  .sticky-cta a:active{
+    transform:translateY(0);
+    box-shadow:0 1px 4px rgba(0,0,0,.22);
+  }
 }
+/* ========== Sticky CTA – end ========== */
