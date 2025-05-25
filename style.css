@@ -2286,6 +2286,7 @@
   }
 
   .sticky-cta a{
+    flex:1;  /* ★この行を、以前削除した場所に再度追加します！ */
  display:flex; align-items:center; justify-content:center; gap:0.4rem;
     font-size:1.05rem; font-weight:700; color:#fff; text-decoration:none;
     padding:0.7rem 0;
