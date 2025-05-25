@@ -2271,13 +2271,13 @@
   display: inline-block;
   text-align: center;
 }
-/* ---------- Sticky CTA for Mobile (only up to 768px) ---------- */
+/* ========== FINAL: Sticky CTA for Mobile (Complete and Cleaned Code) ========== */
 @media (max-width: 768px) {
   .sticky-cta {
     position: fixed;
-    bottom: 1rem;                 /* 下から少し上げて */
-    left: 50%;                    /* 画面中央を基準に */
-    transform: translateX(-50%);  /* 自身の幅の半分だけ左へ */
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 0.5rem;
     padding: 0.5rem;
@@ -2291,11 +2291,11 @@
   }
 
   .sticky-cta a {
-    flex: none;                   /* 必要な幅だけ */
+    flex: 1;                   /* 各ボタンを横幅いっぱいに広げる */
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
+    justify-content: center;   /* ★ボタン内のアイコンとテキストを中央に配置するようになりました！ */
+    gap: 0.4rem; /* アイコンとテキストの間の余白 */
     padding: 0.6rem 1rem;
     font-size: 1rem;
     font-weight: 700;
@@ -2306,15 +2306,20 @@
     transition: transform .15s ease, box-shadow .15s ease, opacity .15s;
   }
 
-  /* 絵文字アイコンとテキスト中央寄せ */
-  .sticky-cta a .cta-icon { font-size: 1.2em; line-height: 1; }
-  .sticky-cta a .cta-text { line-height: 1; }
+  /* 新しく追加したspan要素へのスタイル */
+  .sticky-cta a .cta-icon {
+    font-size: 1.2em; /* 絵文字アイコンのサイズ調整（元のSVGアイコンの代わりとして） */
+    line-height: 1; /* 余分な高さをなくす */
+  }
+  .sticky-cta a .cta-text {
+    line-height: 1; /* 余分な高さをなくす */
+  }
 
   /* ボタン色はそのまま流用 */
-  .sticky-cta a.cta-call {
+  .cta-call {
     background: linear-gradient(135deg, #ff8585 0%, #e53e3e 100%);
   }
-  .sticky-cta a.cta-reserve {
+  .cta-reserve {
     background: linear-gradient(135deg, #5aa9ff 0%, #3182ce 100%);
   }
 
@@ -2329,14 +2334,4 @@
     box-shadow: 0 1px 4px rgba(0,0,0,0.22);
   }
 }
-/* -------------------------------------------------------------- */
-@media (max-width: 768px) {
-  .sticky-cta {
-    position: fixed !important;
-    bottom: 1rem !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: auto !important;
-    max-width: calc(100vw - 2rem) !important;
-  }
-}
+/* ========== FINAL: Sticky CTA for Mobile (End) ========== */
