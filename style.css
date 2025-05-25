@@ -2271,11 +2271,13 @@
   display: inline-block;
   text-align: center;
 }
+/* ↓ これだけを最後に置く ↓ */
+
 .sticky-cta {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50%;                    /* ← 画面中央 */
+  transform: translateX(-50%);  /* ← 自分の幅の半分だけ左へ */
   display: flex;
   gap: 0.5rem;
   padding: 0.5rem;
@@ -2284,48 +2286,45 @@
   border-radius: 12px;
   box-shadow: 0 -3px 15px rgba(0,0,0,0.2);
   z-index: 2147483647;
-  width: auto;
+  width: auto;                  /* ← 幅は中身に合わせる */
 }
 
 .sticky-cta a {
-  flex: none;
+  flex: none;                   /* ← 子要素は自分のサイズだけ */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
+  padding: 0.7rem 1.2rem;
   font-size: 1rem;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
-  padding: 0.7rem 1.2rem;
   border-radius: 9999px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.18);
   transition: transform .15s ease, box-shadow .15s ease, opacity .15s;
 }
 
-.sticky-cta a .cta-icon {
-  font-size: 1.2em;
-  line-height: 1;
-}
-.sticky-cta a .cta-text {
-  line-height: 1;
-}
+/* 絵文字アイコンとテキストを中央に揃える */
+.sticky-cta a .cta-icon { font-size: 1.2em; line-height: 1; }
+.sticky-cta a .cta-text { line-height: 1; }
 
+/* 色だけはそのまま */
 .sticky-cta a.cta-call {
   background: linear-gradient(135deg, #ff8585 0%, #e53e3e 100%);
 }
-
 .sticky-cta a.cta-reserve {
   background: linear-gradient(135deg, #5aa9ff 0%, #3182ce 100%);
 }
 
+/* ホバー／アクティブ効果 */
 .sticky-cta a:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.28);
   opacity: .95;
 }
-
 .sticky-cta a:active {
   transform: translateY(0);
   box-shadow: 0 1px 4px rgba(0,0,0,0.22);
 }
+
