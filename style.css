@@ -2271,3 +2271,16 @@
   display: inline-block;
   text-align: center;
 }
+/* ===== Sticky CTA (mobile) ===== */
+@media (max-width: 768px){
+  .sticky-cta{
+    position:fixed; bottom:0; left:0; width:100%;
+    display:flex; z-index:9999; box-shadow:0 -4px 10px rgba(0,0,0,.15);
+  }
+  .sticky-cta a{
+    flex:1; text-align:center; padding:14px 0;
+    font-size:1.05rem; font-weight:700; color:#fff;
+  }
+  .cta-call   { background:#e53e3e; }  /* 赤：電話 */
+  .cta-reserve{ background:#3182ce; }  /* 青：予約 */
+}
