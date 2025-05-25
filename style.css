@@ -2275,7 +2275,9 @@
 @media (max-width: 768px){
   .sticky-cta{
     position:fixed; bottom:0; left:0; width:100%;
-    display:flex; gap:0.5rem;                /* ボタン間に余白 */
+    display:flex;    
+    justify-content: center; /* ★この行を追加します */
+    gap:0.5rem;                /* ボタン間に余白 */
     padding:0.4rem 0.5rem;                   /* バー内パディング */
     backdrop-filter:blur(10px) saturate(180%);
     background:rgba(255,255,255,0.55);       /* うっすら透けるガラス風 */
@@ -2284,8 +2286,7 @@
   }
 
   .sticky-cta a{
-    flex:1;
-    display:flex; align-items:center; justify-content:center; gap:0.4rem;
+ display:flex; align-items:center; justify-content:center; gap:0.4rem;
     font-size:1.05rem; font-weight:700; color:#fff; text-decoration:none;
     padding:0.7rem 0;
     border-radius:9999px;                    /* pill 形状 */
